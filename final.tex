@@ -163,6 +163,36 @@ which shows that $f \in F(x)$, and consequently that $F(x)$ is closed.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(1)} Fix $u \in C_0$ such that 
+$||u|| = \sup_n |u_n| = 1$, it follows that 
+\eQb
+| u_n | &\leq& 1
+\eQe 
+for all $n \geq 1$, so
+\eQb
+|f(u)| \leq & \sum_{n=1}^{\infty} |\dfrac{1}{2^n} u_n| = 1. 
+\eQe 
+Therefore, 
+\eQb
+||f|| &=& \sup_{||u| = 1} |f(u)| \leq 1. 
+\eQe
+Now, fix $\epsilon > 0$. Choose $N > 1$ such that 
+\eQb
+n \geq N \implies \sum_{k=1}^{n} \dfrac{1}{2^k} > 1- \epsilon.
+\eQe
+Set $u \in c_0$ as 
+\eQb
+u &=& 1 \>\> (n \leq N) \>\> \text{and} \>\> u =  0 \>\> (n > N).
+\eQe
+Then, $u \in c_0$, $||u|| = 1$, and $|f(u)| > 1 - \epsilon$. Therefore,
+it follows that
+\eQb
+1 - \epsilon < ||f||
+\eQe 
+for any $\epsilon > 0$, so $||f|| \geq 1$, which combined with the previous
+estimate gives $||f|| = 1$. \hfill $\qed$ 
+
+\bigskip
 
 \textbf{(2)} Suppose for sake of contradiction that there exists $u \in c_0$, such that
 \eQb
@@ -176,9 +206,164 @@ Then,
 \eQb
 f(u) &<& \sum_{n=1}^{N-1} \dfrac{1}{2^n} u_n  + \dfrac{1}{2} 
 \sum_{n=N}^{\infty}\dfrac{1}{2^n} = 
-\sum_{n=1}^{N-1} \dfrac{1}{2^n} u_n + \dfrac{1}{2^{N+1}}. \\ 
+\sum_{n=1}^{N-1} \dfrac{1}{2^n} u_n + \dfrac{1}{2^{N-1}}. \\ 
+\eQe
+Since $||u|| = 1$, continuing the above estimate gives
+\eQb
+f(u) &<& 1 - \dfrac{1}{2^{N-1}} + \dfrac{1}{2^{N-1}} = 1, 
+\eQe
+which is absurd. \hfill $\qed$
+
+\end{solution}
+
+\newpage
+
+\begin{question}[6]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-6.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+We first show that $\overline{C}$ is convex. Let $x,y \in \overline{C}$, and
+$t \in [0,1]$. Choose, $\{x_n\}, \{y_n\} \subset C$ such that $x_n \to x$ and
+$y_n \to y$. By convexity of $C$, and linearity of limit, it follows that 
+\eQb
+\{ tx_n + (1-t)y_n \} \subset C \>\> \text{ and } \>\> 
+tx_n + (1-t)y_n \to tx + (1-t)y.
+\eQe
+Therefore, $tx + (1-t)y \in C$, which proves the convexity of $\overline{C}$.
+\end{solution}
+
+\newpage
+
+\begin{question}[7]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-7.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\textbf{(1)}
+We first show that $\overline{C}$ is convex. Let $x,y \in \overline{C}$, and
+$t \in [0,1]$. Choose, $\{x_n\}, \{y_n\} \subset C$ such that $x_n \to x$ and
+$y_n \to y$. By convexity of $C$, and linearity of limit, it follows that 
+\eQb
+\{ tx_n + (1-t)y_n \} \subset C \>\> \text{ and } \>\> 
+tx_n + (1-t)y_n \to tx + (1-t)y.
+\eQe
+Therefore, $tx + (1-t)y \in \overline{C}$, 
+which proves the convexity of $\overline{C}$. We now show that $\int C$ is
+convex. Let $x,y \in \int {C}$, and $t \in [0,1]$. By convexity of $C$, 
+\eQb
+tx + (1-t)y \in C 
+\eQe 
+
+
+\bigskip
+
+
+\textbf{(2)}
+
+\bigskip
+
+\textbf{(3)}
+
+
+\end{solution}
+
+\newpage
+
+\begin{question}[8]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-8.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\textbf{(1)}
+We first show that $p$ is in fact a norm. By properties of any gauge of $C$,
+it suffices to show 
+\eQb
+p(x) = 0 \>\> &\iff& \>\> x = 0. 
+\eQe
+If $x = 0$, then 
+\eQb
+\alpha > 0 \implies a^{-1}x = 0 \in C, 
+\eQe
+so $p(x) = 0$. Conversely, suppose that $p(x) = 0$. Firstly, let 
+\eQb
+I &=& \{\lambda > 0 \>;\> \lambda^{-1}x \in C \}, \> \text{ and } \>
+0 < \alpha < \beta. 
+\eQe
+We claim that 
+\eQb
+\beta \not\in I &\implies \alpha \not\in I.
+\eQe
+We prove the contrapositive. Suppose $\alpha \in I$. Then, $\alpha^{-1}x \in C$.
+By convexity of $C$, it follows that
+\eQb
+\dfrac{\beta^{-1}}{\alpha^{-1}}\alpha^{-1}x + (1-\dfrac{\beta^{-1}}{\alpha^{-1}})0
+&=& \beta^{-1}x \in C,
+\eQe
+so $\beta \in I$. Therefore, to prove $p(x) > 0$, it suffices to show that
+there is a constant $k > 0 $ such that $k^{-1}x \not\in C$.  
+Now, suppose for sake of contradiction that $x \neq 0$. 
+ Choose $r$ large enough
+such that $C \subset B(r,0)$ strictly. Then, 
+\eQb
+\dfrac{r}{||x||}x \in C \>\> \text{ and} \>\> 0 < \dfrac{||x||}{r} \in I,
+\eQe
+which as discussed above implies that $p(x) > 0$. Hence, $x = 0$ as required. 
+
+\bigskip
+
+\textbf{(2)} We claim that $C$ is not bounded. Fix $r > 0$. Set 
+\eQb
+f &=& \sqrt{t} X_{[0,\frac{1}{2r}]} + (r -\sqrt{t})X_{(\frac{1}{2r},\frac{1}{r}]} 
 \eQe
 
+\end{solution}
+
+\newpage
+
+\begin{question}[9]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-9.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+ddd
+\end{solution}
+
+\newpage
+
+\begin{question}[10]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-10.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+ddd
+\end{solution}
+\newpage
+
+\begin{question}[11]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-11.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+ddd
 \end{solution}
 
 \end{document}

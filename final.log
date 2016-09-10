@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 SEP 2016 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 SEP 2016 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,45 +588,77 @@ Package pdftex.def Info: funcA-1-4.png used on input line 162.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[3 <./funcA-1-2.png> <./funcA-1-3.png>] [4 <./funcA-1-4.png>]
+<funcA-1-6.png, id=44, 405.515pt x 79.29625pt>
+File: funcA-1-6.png Graphic file (type png)
+ <use funcA-1-6.png>
+Package pdftex.def Info: funcA-1-6.png used on input line 225.
+(pdftex.def)             Requested size: 278.23827pt x 54.40955pt.
+ [5 <./funcA-1-6.png>] <funcA-1-7.png, id=51, 403.5075pt x 85.31876pt>
+File: funcA-1-7.png Graphic file (type png)
+ <use funcA-1-7.png>
+Package pdftex.def Info: funcA-1-7.png used on input line 245.
+(pdftex.def)             Requested size: 278.23827pt x 58.83223pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[6 <./funcA-1-7.png>] <funcA-1-8.png, id=58, 422.57875pt x 366.36874pt>
+File: funcA-1-8.png Graphic file (type png)
 
- []
+<use funcA-1-8.png>
+Package pdftex.def Info: funcA-1-8.png used on input line 276.
+(pdftex.def)             Requested size: 278.23827pt x 241.2339pt.
+ [7 <./funcA-1-8.png>]
+<funcA-1-9.png, id=68, 419.5675pt x 370.38374pt>
+File: funcA-1-9.png Graphic file (type png)
+ <use funcA-1-9.png>
+Package pdftex.def Info: funcA-1-9.png used on input line 330.
+(pdftex.def)             Requested size: 278.23827pt x 245.6239pt.
+ [8 <./funcA-1-9.png>] <funcA-1-10.png, id=75, 419.5675pt x 308.15125pt>
+File: funcA-1-10.png Graphic file (type png)
 
-[3 <./funcA-1-2.png> <./funcA-1-3.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
- [4 <./funcA-1-4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
+<use funcA-1-10.png>
+Package pdftex.def Info: funcA-1-10.png used on input line 343.
+(pdftex.def)             Requested size: 278.23827pt x 204.35376pt.
+ [9 <./funcA-1-10.png>]
+<funcA-1-11.png, id=82, 416.55624pt x 184.69pt>
+File: funcA-1-11.png Graphic file (type png)
+ <use funcA-1-11.png>
+Package pdftex.def Info: funcA-1-11.png used on input line 355.
+(pdftex.def)             Requested size: 278.23827pt x 123.36964pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
+ [10 <./funcA-1-11.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
  (./final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
 Package rerunfilecheck Info: File `final.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 362.
  ) 
 Here is how much of TeX's memory you used:
- 10263 strings out of 493089
- 153141 string characters out of 6134842
- 248117 words of memory out of 5000000
- 13581 multiletter control sequences out of 15000+600000
+ 10305 strings out of 493089
+ 153789 string characters out of 6134842
+ 251117 words of memory out of 5000000
+ 13605 multiletter control sequences out of 15000+600000
  15391 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,8n,39p,251b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb>
-Output written on final.pdf (4 pages, 281079 bytes).
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb>
+Output written on final.pdf (10 pages, 561198 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
