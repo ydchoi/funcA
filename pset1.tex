@@ -142,7 +142,8 @@ which shows that $f \in F(x)$, and consequently that $F(x)$ is closed.
 \end{question}
 \begin{solution} \hfill \\
 \end{solution}
-\bigskip
+
+\newpage
 
 \begin{question}[3]
 \hfill
@@ -152,8 +153,41 @@ which shows that $f \in F(x)$, and consequently that $F(x)$ is closed.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-\end{solution}
+\textbf{(1)}
+By linearity of integration, it follows that $f$ defined is linear. Since $f$
+is linear, it suffices to show continuity at $0$. Fix $\epsilon > 0$. Then, 
+it follows that, with $\delta = \dfrac{\epsilon}{2}$,
+\eQb
+u \in B(0,\delta) &\implies& |\int_{0}^{1} u(t) dt| \leq 
+\int_{0}^{1} |u(t)| dt \leq \delta < \epsilon.
+\eQe
+Therefore $f$ is continuous. Now, we compute its dual norm explicitly. Note that,
+for any $u \in E$,
+\eQb
+|<f,u>| &=& | \int_{0}^{1} u(t) dt|  \leq \int_{0}^{1} |u(t)| dt  \leq ||u||,
+\eQe
+so $||f|| \leq 1$. We now show the reverse inequality. Recall that
+\eQb
+||f|| &=& \sup_{||u|| = 1} |<f,u>|  \\ 
+\eQe 
+Fix $\epsilon > 0$. Set $u \in C[0,1]$ by
+\eQb
+t \to \dfrac{1}{\epsilon}X_{[0,\epsilon]}(t) + X_{(\epsilon,1]}(t) \>\> (t \in [0,1]) 
+\eQe 
+Then, it follows that
+\eQb
+<f,u> &=& \int_{0}^{1} u(t) dt = 1 - \dfrac{\epsilon}{2}.
+\eQe
+Therefore, it follows that $||f|| \geq 1$, and we have completed in showing that
+$||f|| = 1$. \hfill $\qed$
+
 \bigskip
+
+\textbf{(2)} 
+
+\end{solution}
+
+\newpage
 
 \begin{question}[4]
 \hfill
@@ -263,13 +297,16 @@ tx + (1-t)y \in C
 
 
 \bigskip
+We now show that $\int C$ is convex. Let $x,y \in \text{int}{C}$ and $t \in (0,1)$. 
 
 
-\textbf{(2)}
+
+\textbf{(2)} Suppose $x \in C$, $y \in \int C$, and $t \in (0,1)$.  
 
 \bigskip
 
-\textbf{(3)}
+\textbf{(3)} It is trivial that $\overline{\text{int} C} \subset \overline{C}$. Hence,
+it suffices to show that $\overline{C} \subset \overline{\int C}$. 
 
 
 \end{solution}
@@ -338,7 +375,41 @@ f &=& \sqrt{t} X_{[0,\frac{1}{2r}]} + (r -\sqrt{t})X_{(\frac{1}{2r},\frac{1}{r}]
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-ddd
+We first note that every hyperplane is closed, because linearity of a map
+defined on a finite dimensional space implies continuity. 
+
+\bigskip
+
+\textbf{(1)}
+
+\bigskip
+
+\textbf{(2)}
+
+\bigskip
+
+\textbf{(3)}
+
+\bigskip
+
+\textbf{(4)} Set $C = A - B$. As $ A \cap B = \empty$, we see that $0 \not\in C$. 
+We now show that $C$ is still convex. Suppose $x,y \in C$ and $t \in [0,1]$. 
+Then, there are $a_x, a_y \in A$ and $b_x, b_y \in B$ such that 
+\eQb
+x = a_x - b_x \>\> \text{ and } \>\> y = a_y - b_y. \\
+\eQe
+Then, it follows that
+\eQb
+tx + (1-t)y &=& t(a_x - b_x) + (1-t)(a_y - b_y) = (ta_x + (1-t)a_y) - 
+(tb_x - (1-t)b_y) \in C,
+\eQe
+where the last inclusion holds by convexity of $A$ and $B$. Hence, $C$ is a 
+nonempty convex set such that $0 \not\in C$. Apply $(3)$ to $C$, then
+there is $f \in E^*$ such that 
+\eQb
+<f,x> 
+\eQe
+
 \end{solution}
 
 \newpage
