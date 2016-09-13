@@ -358,10 +358,37 @@ which as discussed above implies that $p(x) > 0$. Hence, $x = 0$ as required.
 
 \bigskip
 
-\textbf{(2)} We claim that $C$ is not bounded. Fix $r > 0$. Set 
+\textbf{(2)}
+We first check convexity of $C$. Let $u,v \in C$ and $\lambda \in [0,1]$. Then,
+\eQb
+\int_{0}^{1} |\lambda u + (1-\lambda)v|^2 dt 
+&\leq& \int_{0}^{1} (\lambda|u|+(1-\lambda)|v|)^2 \\ 
+&\leq& 
+\lambda^2 \int_{0}^{1}|u|^2 + 2\lambda(1-\lambda)\int_{0}^{1} |u||v|  
++ (1-\lambda)^2\int_{0}^{1} |v|^2 \\
+&<& \lambda^2 + (1-\lambda)^2 + 2\lambda(1-\lambda) = 1,
+\eQe
+where the second last inequality holds by Cauchy-Schwarz. 
+Now, $0$ is clearly in $C$ and $C$ is symmetric, because
+\eQb
+\int_{0}^{1} |u(t)|^2 dt &=& \int_{0}^{1} |-u(t)|^2 dt.
+\eQe
+
+\bigskip
+
+We claim that $C$ is not bounded. Fix $r > 0$. Set 
 \eQb
 f &=& \sqrt{t} X_{[0,\frac{1}{2r}]} + (r -\sqrt{t})X_{(\frac{1}{2r},\frac{1}{r}]} 
 \eQe
+
+\bigskip
+
+We now compute the gauge $p$ of $C$. For $u \in E$, it follows that
+\eQb
+p(u) &=& \inf \{ \lambda > 0 \> ; \> \lambda^{-1}u \in C \} \\
+&=& \inf \{ \lambda > 0 \> ; \> \lambda^{-2} \int_{0}^{1} |u(t)|^2 dt < 1 \} \\ 
+&=& \inf \{ \lambda > 0 \> ; \> \int_{0}^{1} |u(t)|^2 dt < \lambda^2 \} 
+\eQe 
 
 \end{solution}
 
@@ -375,28 +402,63 @@ f &=& \sqrt{t} X_{[0,\frac{1}{2r}]} + (r -\sqrt{t})X_{(\frac{1}{2r},\frac{1}{r}]
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-We first note that every hyperplane is closed, because linearity of a map
-defined on a finite dimensional space implies continuity. 
+We record two fundamental facts about finite dimensional spaces. First, 
+linearity of a map on a finite dimensional space implies continuity. Second,
+every finite dimensional space is separable.
 
 \bigskip
 
-\textbf{(1)}
+\textbf{(1)} Firstly, as $\{ x_n \} \subset \bigcup_{n=1}^{\infty} C_n$, 
+and $\{ x_n \}$ is dense in $C$, $\bigcup_{n=1}^{\infty} C_n$ is dense in $C$.
+Now, consider 
+\eQb
+A &=& \Bigg\{\lambda \in \mathbb{R}^n \> : \> \lambda_i \geq 0 
+\>\> \forall i \>\> , \sum_i \lambda_i = 1 \Bigg\},
+\eQe
+and 
+\eQb
+\Phi:\mathbb{R}^n \to E \>\> \text{where} \>\>
+\lambda_i \mapsto \sum_{i} \lambda_i x_i. 
+\eQe
+It suffices to show that $\Phi$ is continuous, because $A$ is a compact subset
+of $\mathbb{R}^n$, whose image is $C_n$. $\Phi$, however, is trivially continuous, 
+because it is linear. 
 
 \bigskip
 
-\textbf{(2)}
+\textbf{(2)} By the second geometric Hahn-Banach, applied with $A = \{ 0\}$
+and $B = C_n$, there exists $f_n \in E^*$
+not vanishing, such that
+\eQb
+<f_n,x> &\geq& 0 \>\> \forall x \in C_n.
+\eQe 
+By normalizing, we also obtain $||f_n|| = 1$. 
 
 \bigskip
 
-\textbf{(3)}
+\textbf{(3)} By compactness of unit sphere in finite dimensional space, 
+there exists $\{f_{n_k} \}$ such that
+\eQb
+f_{n_k} \to f \>\> \text{such that } \>\> ||f|| = 1.
+\eQe
+Since uniform convergence implies pointwise convergence and $\{C_n\}$
+are increasing, we have
+\eQb
+||f|| = 1 \>\> \text{ and} \>\> <f,x> \> \geq 0 \>\> \forall x \in \bigcup_n C_n,
+\eQe 
+which by density of $C_k$ in $C$ and continuity of $f$, gives
+\eQb
+||f|| = 1 \>\> \text{ and} \>\> <f,x> \> \geq 0 \>\> \forall x \in C,
+\eQe
+as required.
 
 \bigskip
 
-\textbf{(4)} Set $C = A - B$. As $ A \cap B = \empty$, we see that $0 \not\in C$. 
+\textbf{(4)} Set $C = A - B$. As $ A \cap B = \emptyset$, we see that $0 \not\in C$. 
 We now show that $C$ is still convex. Suppose $x,y \in C$ and $t \in [0,1]$. 
 Then, there are $a_x, a_y \in A$ and $b_x, b_y \in B$ such that 
 \eQb
-x = a_x - b_x \>\> \text{ and } \>\> y = a_y - b_y. \\
+x = a_x - b_x \>\> \text{ and } \>\> y = a_y - b_y. 
 \eQe
 Then, it follows that
 \eQb
@@ -404,12 +466,19 @@ tx + (1-t)y &=& t(a_x - b_x) + (1-t)(a_y - b_y) = (ta_x + (1-t)a_y) -
 (tb_x - (1-t)b_y) \in C,
 \eQe
 where the last inclusion holds by convexity of $A$ and $B$. Hence, $C$ is a 
-nonempty convex set such that $0 \not\in C$. Apply $(3)$ to $C$, then
-there is $f \in E^*$ such that 
+nonempty convex set such that $0 \not\in C$. Apply $(3)$ to $C$ and $\{ 0\}$,
+then there is $f \in E^*$ such that 
 \eQb
-<f,x> 
+||f|| = 1 \>\> \text{and} \>\> <f,x> \geq 0 \>\> \forall x \in C, 
 \eQe
-
+which implies that
+\eQb
+<f,a-b> \> \geq \> 0 \>\> &\text{and}& \>\> <f,a> \> \geq \> <f,b> ,
+\eQe
+for all $a \in A$ and $b \in B$. Therefore, there exists a hyperplane
+that separates $A$ and $B$. We see that in finite dimensional space
+topological assumptions on $A$ and $B$ can be relaxed to obtain an existence
+of a separating hyperplane. \hfill $\qed$
 \end{solution}
 
 \newpage
