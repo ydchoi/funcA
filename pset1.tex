@@ -252,6 +252,51 @@ which is absurd. \hfill $\qed$
 
 \newpage
 
+\begin{question}[5]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{funcA-1-5.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\textbf{(1)} Consider subsets of $E$ that only contain linearly independent 
+vectors, denoted by $\mathscr{L}$. 
+We impose the order by the usual set inclusion. Then,
+it is clear that $\mathscr{L}$ is inductive, as for any totally ordered subset 
+$\mathscr{T} \subset \mathscr{L}$, it follows that $\bigcup_{T \in \mathscr{T}}
+T \in \mathscr{L}$ and is an upper bound of $\mathscr{T}$. Hence, there exists
+a maximal element of $\mathscr{L}$, $\mathscr{A}$. We claim that $\mathscr{A}$
+is an algebraic basis. Normalize each vector in $\mathscr{A}$, then we are done.  
+
+
+\bigskip
+
+\textbf{(2)} Choose an normalized algebraic basis $\{e_i\}_{i\in I}$,
+and choose a countable subset and re-index them by $\mathbb{N}$,
+so that $C = \{e_n\}_{n \in \mathbb{N}} \subset \{e_i\}_{i \in I}$. 
+Define $f:E \to \mathbb{R}$ by
+\eQb
+e_n &\mapsto& n \>\> ( n \in \mathbb{N}),
+\eQe
+and
+\eQb
+e_i &\mapsto& 0 \>\> (i \not\in C), 
+\eQe 
+with the extension given by
+\eQb
+x = \sum_{J} x_j e_j &\mapsto& \>\> \sum_{J} x_j f(e_j) \>\> (x \in E)
+\eQe
+where $J$ is given by the unique basis representation given by the algebraic basis.
+It is clear that $f$ is linear and $\sup_{||x|| = 1} |<f,x>|$ is not bounded.
+
+\bigskip
+
+\textbf{(3)} 
+
+\end{solution}
+\newpage
+
 \begin{question}[6]
 \hfill
 \begin{figure}[h!]
@@ -509,7 +554,68 @@ ddd
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-ddd 
+\textbf{(1)} Let $ x \in l^1$ such that there is $\{x_n\} \subset X$ with
+$x_n \to x$. Then,
+\eQb
+\sum_k |(x)_k - (x_n)_k| \to 0 \>\> \text{as} \>\> n \to \infty,
+\eQe
+which implies
+\eQb
+(x_n)_k \to (x)_k \>\> \text{ as} \>\> n \to \infty
+\eQe
+for any $k \geq 1$. Since, $(x_n)_{2k} = 0$ for any $n,k \geq 1$,
+it follows that $x_{2k} = 0$ for any $k \geq 1$ and $x \in X$, which shows that
+$X$ is closed.
+
+\smallskip
+
+Now, we check that $Y$ is closed. Let $y \in l^1$ such that 
+there is $\{y_n\} \subset Y$ with $y_n \to y$. Then,
+\eQb
+\sum_k |(y)_k - (y_n)_k| \to 0 \>\> \text{as} \>\> n \to \infty,
+\eQe
+which implies 
+\eQb
+(y_n)_k \to (y)_k \>\> \text{ as} \>\> n \to \infty
+\eQe
+for any $k \geq 1$. Since 
+\eQb
+\dfrac{1}{2^k} (y_n)_{2k-1} = (y_n)_{2k},
+\eQe 
+for all $k,n \geq 1$, it follows that
+\eQb
+\lim_{n} (y_n)_{2k} &=& \lim_{n} \dfrac{1}{2^k} (y_n)_{2k-1} = 
+\dfrac{1}{2^k} \lim_{n} (y_n)_{2k-1} = \dfrac{1}{2^k}(y)_{2k-1},
+\eQe
+for all $k \geq 1$, so $y \in Y$, and $Y$ is closed.
+
+\bigskip
+
+Now, we show that $\overline{X + Y} = E$. Let $z \in E$.  
+
+\bigskip
+
+\textbf{(2)}
+Suppose that $c \in X + Y$, then it follows that there exists $x \in X$ and
+$y \in Y$, such that, for any $n \in \mathbb{N}$,
+\eQb
+\dfrac{1}{2^n} &=& \dfrac{1}{2^n}y_{2n-1},
+\eQe
+which implies 
+\eQb
+y_{2n-1} &=& 1,
+\eQe
+which contradicts $y \in l^1$. So, $x \not\in X+Y$.
+
+\bigskip
+
+\textbf{(3)}
+
+\bigskip 
+
+\textbf{(4)}
+
+
 \end{solution}
 
 \newpage
