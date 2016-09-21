@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 SEP 2016 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 SEP 2016 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**pset1.tex
-(./pset1.tex
+**pset1-h.tex
+(./pset1-h.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -449,8 +449,8 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(./pset1.aux)
-\openout1 = `pset1.aux'.
+No file pset1-h.aux.
+\openout1 = `pset1-h.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
@@ -467,7 +467,7 @@ LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 71.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box36
@@ -498,10 +498,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 71.
 LaTeX Info: Redefining \pageref on input line 71.
 LaTeX Info: Redefining \nameref on input line 71.
-
-(./pset1.out) (./pset1.out)
 \@outlinefile=\write3
-\openout3 = `pset1.out'.
+\openout3 = `pset1-h.out'.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -550,145 +548,118 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 76.
 
-<funcA-1-1.png, id=4, 413.545pt x 574.145pt>
-File: funcA-1-1.png Graphic file (type png)
- <use funcA-1-1.png>
-Package pdftex.def Info: funcA-1-1.png used on input line 86.
-(pdftex.def)             Requested size: 278.23827pt x 386.29588pt.
- [1
+<funcA-h-e1-p1.png, id=4, 606.265pt x 58.2175pt>
+File: funcA-h-e1-p1.png Graphic file (type png)
+ <use funcA-h-e1-p1.png>
+Package pdftex.def Info: funcA-h-e1-p1.png used on input line 86.
+(pdftex.def)             Requested size: 278.23827pt x 26.71819pt.
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./funcA
--1-1.png>]
-[2] <funcA-1-2.png, id=26, 410.53375pt x 377.41pt>
-File: funcA-1-2.png Graphic file (type png)
- <use funcA-1-2.png>
-Package pdftex.def Info: funcA-1-2.png used on input line 140.
-(pdftex.def)             Requested size: 278.23827pt x 255.78885pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-[3 <./funcA-1-2.png>] <funcA-1-3.png, id=33, 410.53375pt x 305.14pt>
-File: funcA-1-3.png Graphic file (type png)
+[1
 
-<use funcA-1-3.png>
-Package pdftex.def Info: funcA-1-3.png used on input line 152.
-(pdftex.def)             Requested size: 278.23827pt x 206.808pt.
- [4 <./funcA-1-3.png>]
-<funcA-1-4.png, id=41, 416.55624pt x 146.5475pt>
-File: funcA-1-4.png Graphic file (type png)
- <use funcA-1-4.png>
-Package pdftex.def Info: funcA-1-4.png used on input line 196.
-(pdftex.def)             Requested size: 278.23827pt x 97.89113pt.
- [5 <./funcA-1-4.png>] <funcA-1-5.png, id=48, 589.20125pt x 268.00125pt>
-File: funcA-1-5.png Graphic file (type png)
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./funcA
+-h-e1-p1.png>] <funcA-h-e1-p2.png, id=16, 614.295pt x 136.51pt>
+File: funcA-h-e1-p2.png Graphic file (type png)
 
-<use funcA-1-5.png>
-Package pdftex.def Info: funcA-1-5.png used on input line 259.
-(pdftex.def)             Requested size: 278.23827pt x 126.55763pt.
- [6 <./funcA-1-5.png>]
-<funcA-1-6.png, id=59, 405.515pt x 79.29625pt>
-File: funcA-1-6.png Graphic file (type png)
- <use funcA-1-6.png>
-Package pdftex.def Info: funcA-1-6.png used on input line 304.
-(pdftex.def)             Requested size: 278.23827pt x 54.40955pt.
- [7 <./funcA-1-6.png>] <funcA-1-7.png, id=67, 403.5075pt x 85.31876pt>
-File: funcA-1-7.png Graphic file (type png)
- <use funcA-1-7.png>
-Package pdftex.def Info: funcA-1-7.png used on input line 317.
-(pdftex.def)             Requested size: 278.23827pt x 58.83223pt.
+<use funcA-h-e1-p2.png>
+Package pdftex.def Info: funcA-h-e1-p2.png used on input line 98.
+(pdftex.def)             Requested size: 278.23827pt x 61.83093pt.
 
-[8 <./funcA-1-7.png>] <funcA-1-8.png, id=74, 422.57875pt x 366.36874pt>
-File: funcA-1-8.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
-<use funcA-1-8.png>
-Package pdftex.def Info: funcA-1-8.png used on input line 358.
-(pdftex.def)             Requested size: 278.23827pt x 241.2339pt.
- [9 <./funcA-1-8.png>] [10]
-<funcA-1-9.png, id=87, 419.5675pt x 370.38374pt>
-File: funcA-1-9.png Graphic file (type png)
- <use funcA-1-9.png>
-Package pdftex.def Info: funcA-1-9.png used on input line 439.
-(pdftex.def)             Requested size: 278.23827pt x 245.6239pt.
- [11 <./funcA-1-9.png>] [12] <funcA-1-10.png, id=98, 419.5675pt x 308.15125pt>
-File: funcA-1-10.png Graphic file (type png)
+ []
 
-<use funcA-1-10.png>
-Package pdftex.def Info: funcA-1-10.png used on input line 528.
-(pdftex.def)             Requested size: 278.23827pt x 204.35376pt.
- [13 <./funcA-1-10.png>]
-<funcA-1-11.png, id=106, 416.55624pt x 184.69pt>
-File: funcA-1-11.png Graphic file (type png)
- <use funcA-1-11.png>
-Package pdftex.def Info: funcA-1-11.png used on input line 540.
-(pdftex.def)             Requested size: 278.23827pt x 123.36964pt.
- [14 <./funcA-1-11.png>] <funcA-1-12.png, id=113, 604.2575pt x 159.59625pt>
-File: funcA-1-12.png Graphic file (type png)
+[2 <./funcA-h-e1-p2.png>] <funcA-h-e1-p3.png, id=23, 620.3175pt x 113.42375pt>
+File: funcA-h-e1-p3.png Graphic file (type png)
 
-<use funcA-1-12.png>
-Package pdftex.def Info: funcA-1-12.png used on input line 553.
-(pdftex.def)             Requested size: 278.23827pt x 73.4882pt.
- [15 <./funcA-1-12.png>]
-<funcA-1-14.png, id=121, 419.5675pt x 452.69125pt>
-File: funcA-1-14.png Graphic file (type png)
- <use funcA-1-14.png>
-Package pdftex.def Info: funcA-1-14.png used on input line 575.
-(pdftex.def)             Requested size: 278.23827pt x 300.207pt.
+<use funcA-h-e1-p3.png>
+Package pdftex.def Info: funcA-h-e1-p3.png used on input line 110.
+(pdftex.def)             Requested size: 278.23827pt x 50.87405pt.
 
-[16 <./funcA-1-14.png>] [17] <funcA-1-16.png, id=132, 421.575pt x 169.63374pt>
-File: funcA-1-16.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
-<use funcA-1-16.png>
-Package pdftex.def Info: funcA-1-16.png used on input line 649.
-(pdftex.def)             Requested size: 278.23827pt x 111.9586pt.
- [18 <./funcA-1-16.png>]
-<funcA-1-17.png, id=139, 420.57124pt x 210.7875pt>
-File: funcA-1-17.png Graphic file (type png)
- <use funcA-1-17.png>
-Package pdftex.def Info: funcA-1-17.png used on input line 662.
-(pdftex.def)             Requested size: 278.23827pt x 139.45146pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
+ []
 
-[19 <./funcA-1-17.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
- (./pset1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
-Package rerunfilecheck Info: File `pset1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 668.
+[3 <./funcA-h-e1-p3.png>] <funcA-h-e1-p4.png, id=30, 610.28pt x 172.645pt>
+File: funcA-h-e1-p4.png Graphic file (type png)
+
+<use funcA-h-e1-p4.png>
+Package pdftex.def Info: funcA-h-e1-p4.png used on input line 122.
+(pdftex.def)             Requested size: 278.23827pt x 78.71428pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+[4 <./funcA-h-e1-p4.png>] <funcA-h-e1-p5.png, id=37, 614.295pt x 166.6225pt>
+File: funcA-h-e1-p5.png Graphic file (type png)
+
+<use funcA-h-e1-p5.png>
+Package pdftex.def Info: funcA-h-e1-p5.png used on input line 134.
+(pdftex.def)             Requested size: 278.23827pt x 75.47011pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+[5 <./funcA-h-e1-p5.png>] <funcA-h-e1-p6.png, id=44, 613.29124pt x 92.345pt>
+File: funcA-h-e1-p6.png Graphic file (type png)
+
+<use funcA-h-e1-p6.png>
+Package pdftex.def Info: funcA-h-e1-p6.png used on input line 146.
+(pdftex.def)             Requested size: 278.23827pt x 41.89444pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+[6 <./funcA-h-e1-p6.png>] <funcA-h-e1-p7.png, id=51, 606.265pt x 79.29625pt>
+File: funcA-h-e1-p7.png Graphic file (type png)
+
+<use funcA-h-e1-p7.png>
+Package pdftex.def Info: funcA-h-e1-p7.png used on input line 158.
+(pdftex.def)             Requested size: 278.23827pt x 36.392pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+[7 <./funcA-h-e1-p7.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+ (./pset1-h.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+
+
+Package rerunfilecheck Warning: File `pset1-h.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `pset1-h.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 10344 strings out of 493089
- 154377 string characters out of 6134842
- 251135 words of memory out of 5000000
- 13625 multiletter control sequences out of 15000+600000
- 15391 words of font info for 40 fonts, out of 8000000 for 9000
+ 10276 strings out of 493089
+ 153527 string characters out of 6134842
+ 246044 words of memory out of 5000000
+ 13591 multiletter control sequences out of 15000+600000
+ 14377 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,39p,251b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,253b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
-w/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb>
-Output written on pset1.pdf (19 pages, 818421 bytes).
+exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on pset1-h.pdf (7 pages, 292671 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

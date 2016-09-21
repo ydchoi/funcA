@@ -556,9 +556,15 @@ ddd
 \begin{solution} \hfill \\
 $(A) \implies (B)$ is trivial. Choose $x \in E$ with the condition in $(A)$. Then,
 \eQb
-\sum_{i=1}^{n} \beta_i f_i(x) = \sum_{i=1}^{n} \beta_i \alpha_i,
+0 &=& \sum_{i=1}^{n} \beta_i f_i(x) = \sum_{i=1}^{n} \beta_i \alpha_i,
 \eQe
-for any $\beta_1,...,\beta_n \in \mathbb{R}$. 
+for any $\beta_1,...,\beta_n \in \mathbb{R}$. We now show $\not (A) \implies \not (B)$.
+Fix $x \in E$. Then, there exists $1 \leq i^* \leq n$ such that $f_{i^*}(x) 
+\neq a_{i^*}$. 
+Choose $\beta_k = 0$ if $k \neq i$ and $\beta_k = 1$ if $k = i$. Then, we obtain
+\eQb
+0 &=& \sum_{i=1}^{n} \beta_i f_i(x) = \beta_{i^*}` 
+\eQe 
 \end{solution}
 \newpage
 
