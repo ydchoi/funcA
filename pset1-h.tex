@@ -111,6 +111,29 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(i)}
+
+
+\textbf{(ii)} We proceed to construct a sequence $\{x_n\} \subset B_1$ 
+such that there is no convergent subsequence, which shows that $B_1$ is not
+compact in strong topology through sequential characterization of compactness
+(strong topology is trivially metrizable). 
+
+\smallskip
+Choose any $x \in E$ such that $||x|| = 1$ and set $x_1 = x$. 
+Then, for any $n$, using $(i)$, 
+choose $x_n$ such that 
+\eQb
+||x_n|| = 1 \>\> \text{and}  \>\> ||x_n - y|| > \dfrac{1}{2}, 
+\eQe
+for any $y \in \text{span}(x_1,...,x_{n-1})$, where the validity comes from
+the fact that any finite dimensional subspace is a proper, closed subspace
+of an infinite dimensional space. Then, it is clear that $\{x_n\}$ has no
+convergent subsequence, because for any $n \geq 1$, there exists $k, l \geq n$
+with $k \neq l$, such that $||x_k - x_l|| > \dfrac{1}{2}$. Since being cauchy
+is a necessary condition for being convergent, we are done. 
+\hfill $\qed$ 
+
 \end{solution}
 
 \newpage
