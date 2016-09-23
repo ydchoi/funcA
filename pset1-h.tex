@@ -87,6 +87,41 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+First, define a map $\Phi:Y^{\perp} \to (E \setminus Y)^*$ naturally by
+\eQb
+f &\mapsto& ([x] \mapsto f(x))
+\eQe 
+where $[x] \in E\setminus Y$. The map is well-defined, because for any $[x] = [x']$,
+\eQb
+x' = x + y \>\> \text{for some} \>\> y \in Y \> \text{and} \>
+f(x') = f(x) + f(y) = f(x).
+\eQe
+We now claim that $\Phi$ is a surjective isometry. By definition, for any $f \in
+Y^{\perp}$,
+\eQb
+||\Phi(f)|| &=& \sup_{||[x]|| = 1} |<\Phi(f),[x]>| = \sup_{||[x]|| = 1} |<f,x>| \\
+&=& \sup_{\inf_{y \in Y} ||x - y|| = 1} |<f,x>| 
+\eQe 
+
+\bigskip
+
+For sake of completeness, we note that if both pre-image and image are Banach,
+then a surjective isometry is a isometric isomorphism. This is a direct consequence
+of open mapping theorem. First, isometry implies injectivity: for $T \in
+\mathscr{L}(E,F)$ and $x,y \in E$, if $T(x) = T(y)$,
+then $0 = ||T(x-y)|| = ||x-y||$, so $x = y$. Therefore, $T^{-1}$ is well-defined
+as a map. Now, by open mapping theorem, we see that for any $O$ open in $E$,
+$(T^{-1})^{-1}(O) = T(O)$ is open in $F$. Therefore, $T^{-1}$ is continuous as required.
+
+\bigskip
+
+It remains to be shown that $Y^{\perp}$ and $E \setminus Y$ are Banach. Suppose
+$f \in E^*$ such that there exists $\{f_n\} \subset Y^{\perp}$ with $f_n \to f$. It
+suffices to show that for any $y in Y$, we have $<f,y> = 0$. But this is true,
+because norm convergence implies pointwise convergence and for all $n \geq 1$,
+$<f_n,x> = 0$. Now, $E \setminus Y$ is Banach with respect to the quotient norm,
+because  
+
 \end{solution}
 
 \newpage
@@ -111,8 +146,30 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-\textbf{(i)}
+\textbf{(i)} We prove the following generalization, known as the Riesz Lemma:
+for each $\epsilon > 0$, there exists $x \in E$ such that $||x - y|| 
+\geq 1 - \epsilon$, for any $y \in Y$. 
 
+\smallskip
+
+Let $0 < \epsilon < 1$. Let $x \in E\setminus Y$. As $Y$ is closed,
+\eQb
+d &:=& \text{dist}(x,Y) > 0.
+\eQe
+Choose $y^*$ in $Y$ such that 
+\eQb
+d \leq || x - y^* || \leq \dfrac{d}{1-\epsilon}. \>\>\> (1)
+\eQe
+Set $x^* = \dfrac{x-y^*}{||x-y^*||}$. Clearly, $||x^*|| = 1$, and,
+for any $y \in Y$,
+\eQb
+||x^* - y|| &=& ||\dfrac{x-y^*}{||x-y^*||} - y|| = 
+\dfrac{1}{||x-y^*||}||x- (y^* + y||x-y||^*)|| \\
+&\geq&  \dfrac{d}{||x-y^*||} = 1-\epsilon, 
+\eQe 
+where the last inequality follows from $(1)$, and we are done.  
+
+\bigskip
 
 \textbf{(ii)} We proceed to construct a sequence $\{x_n\} \subset B_1$ 
 such that there is no convergent subsequence, which shows that $B_1$ is not
@@ -146,6 +203,68 @@ is a necessary condition for being convergent, we are done.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(i)} 
+Let $g$ be a bounded real-valued function and $\lambda > 0$. Then, by
+linearity of Lebesgue integration,
+\eQb
+p(\lambda g) &=& \inf\{ l(h): \lambda g \leq h \in L^{\infty} \} \\
+\lambda p(g) &=& \inf\{ l(\lambda h): g \leq h \in L^{\infty} \}.
+\eQe
+We claim that
+\eQb
+A := \{ l(h) : \lambda g \leq h \in L^{\infty} \} &=& 
+\{ l(\lambda h): g \leq h \in L^{\infty} \} =: B
+\eQe
+If $\lambda g \leq h \in L^{\infty}$, 
+then $ g \leq \dfrac{h}{\lambda} \in L^{\infty}$,
+so $l(\lambda \dfrac{h}{\lambda}) = l(\lambda) \in B$. Conversely, if 
+$ g \leq h \in L^{\infty}$ then, $\lambda g \leq \lambda h \in L^{\infty}$, 
+so $l(\lambda h) \in A$. Hence, $p(\lambda g) = \lambda p(g)$. 
+
+\smallskip
+
+We now show that $p$ is sub-additive. Let $f,g$ be bounded real functions.
+Then, for any $h_1, h_2 \in L^{\infty}$ such that $f \leq h_1$ and $g \leq h_2$,
+\eQb
+f+g &\leq& h_1 + h_2 \in L^{\infty},
+\eQe
+so, again by linearity of integration, 
+\eQb
+p(f+g) &\leq& l(h_1 + h_2) = l(h_1) + l(h_2). 
+\eQe
+Taking infs for $h_1$, then $h_2$, gives
+\eQb
+p(f+g) &\leq& p(f) + p(g), 
+\eQe
+as required.
+
+\smallskip
+ 
+For any $f,g$ bounded real-valued functions, 
+\eQb
+p(f+g) &=& \inf\{ l(f+g) : f+g \leq h , h \in L^{\infty}[0,1]\} \\ 
+&=& \inf\{ l(f) + l(g) : f+g \leq h , h \in L^{\infty}[0,1]\}. 
+\eQe
+Suppose $g \leq 0$. Then, as $0 \in L^{\infty}[0,1]$ and $l(0) = 0$, by definition,
+$p(g) \leq 0$. 
+
+\smallskip
+
+We show that $p(f) = l(f)$ if $f \in L^{\infty}[0,1]$. 
+For all $h \in L^{\infty}[0,1]$ such that $f \leq h$, then, by monotonicity
+of Lebesgue integration, $l(f) \leq l(h)$. Since $f \leq f$ trivially, it follows
+that $p(f) = l(f)$. \hfill $\qed$
+
+\bigskip
+
+\textbf{(ii)}
+Now, as $l = p$ on $L^{\infty}[0,1]$, by Hahn-Banach, $l$ can be extended to
+the entire space of bounded real-valued functions. This shows that 
+we can make sense of integration for any bounded functions in a weaker sense,
+sacrificing some nice properties, such as countable additivity and so on(probably
+if such properties hold, then it will contradict existence of non-measurable sets
+by considering appropriate indicators). 
+\hfill $\qed$ 
 \end{solution}
 
 \newpage
@@ -170,6 +289,42 @@ is a necessary condition for being convergent, we are done.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+By ordinary properties of Minkowski functionals, it suffices to show that
+for any $x \in E$ and $\lambda \in \mathbb{R}$,
+\eQb
+p(\lambda x) = |\lambda| p(x) \>\> &\text{and}& \>\>
+p(x) = 0 \implies x = 0.
+\eQe
+We first prove the absolute homogeneity of $p$.
+Now, if $\lambda \geq 0$,
+then $p(\lambda x) = \lambda p(x)$ by positive homogeneity of Minkowski functionals.
+Now, if $\lambda \geq 0$, then, by symmetry, and positive homogeneity again,
+we obtain
+\eQb
+p(\lambda x) = p(-\lambda x) = -\lambda p(x), 
+\eQe
+which completes the proof of absolute homogeneity. 
+
+\bigskip
+
+Now, observe that, for any $0 <\alpha < \beta$, and $x \in E$, 
+\eQb
+\alpha^{-1}x \in C &\implies \beta^{-1}x \in C,
+\eQe
+because by convexity
+\eQb
+(1- \dfrac{\beta^{-1}}{\alpha^{-1}})0 + \dfrac{\beta^{-1}}{\alpha^{-1}}\alpha^{-1}x
+= \beta^{-1}x \in C.
+\eQe
+Let $x \in E$ such that $p(x) = 0$, Then, by the above discussion,
+it follows that
+\eQb
+\alpha^{-1}x &\in& C \>\>\> (*),
+\eQe
+for any $\alpha \in (0,\infty)$. Suppose $x \neq 0$, and let $r > 0$ 
+large enough that $C \subset B(0,r)$. Then, it follows that, from $(*)$,
+$\dfrac{r}{||x||}x \in C$, which contradicts the fact that $C \subset B(0,r)$.
+Therefore, $x = 0$ and we are done. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -182,6 +337,9 @@ is a necessary condition for being convergent, we are done.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+
+It is a well-known fact that $L^{\infty}$ is not separable. The proof can be
+found in the Brezis textbook chapter 4.  
 \end{solution} 
 
 
