@@ -134,6 +134,15 @@ because
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+If $x \in \bar{G}$, then $m(x) = 0$,
+and $M(x) = 0$, because by continuity for any $f \in E^*$ such that $f = 0$
+on $G$, it follows that $f = 0$ on $\overline{G}$.
+Suppose $x \in  E \setminus \overline{G}$.  
+
+
+\bigskip
+
+
 \end{solution}
 
 \newpage
@@ -165,9 +174,9 @@ for any $y \in Y$,
 \eQb
 ||x^* - y|| &=& ||\dfrac{x-y^*}{||x-y^*||} - y|| = 
 \dfrac{1}{||x-y^*||}||x- (y^* + y||x-y||^*)|| \\
-&\geq&  \dfrac{d}{||x-y^*||} = 1-\epsilon, 
+&\geq&  \dfrac{d}{||x-y^*||} \leq 1-\epsilon, 
 \eQe 
-where the last inequality follows from $(1)$, and we are done.  
+where the last inequality follows from $(1)$, and we are done. \hfill $\qed$ 
 
 \bigskip
 
@@ -277,6 +286,36 @@ by considering appropriate indicators).
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Without loss of generality, assume $x = 0$ and $x \not \in K$. Let $\{y_n\}$
+be the minimizing sequence. As $E$ is Banach, and $K$ is closed, it suffices to 
+show that $\{y_n\}$ is cauchy. We claim that, it suffices to show, 
+\eQb
+||\dfrac{x_n + x_m}{2}|| \to 1 \>\>\> \text{as} \>\>\> n,m \to \infty \>\> (*)
+\eQe 
+By uniform convexity assumption, the above implies that $\{x_n\}$ is cauchy.
+Now, it follows that that $\{y_n\}$ is cauchy.
+
+\bigskip
+
+Now, we prove $(*)$. 
+by convexity of $K$, for any $n,m \geq 1$,
+\eQb
+d \leq ||\dfrac{y_n + y_m}{2}|| \leq ||\dfrac{y_n}{2}|| + ||\dfrac{y_m}{2}|| 
+\eQe
+so
+\eQb
+||\dfrac{y_n + y_m}{2}|| \to d \>\>\> &\text{as}& \>\> n,m \to \infty.
+\eQe
+Then,
+\eQb
+\lim_{n,m \to \infty} ||\dfrac{x_n + x_m}{2}|| &=& 
+||\lim_{n \to \infty}\dfrac{y_n}{2||y_n||} + \lim_{n \to \infty}\dfrac{y_m}{2||y_m||}||
+= \dfrac{1}{d} ||\lim_{n\to \infty} \dfrac{y_n}{2} + \lim_{m \to \infty}
+\dfrac{y_m}{2}|| \\ 
+&=& \dfrac{1}{d} \lim_{n,m \to \infty} || \dfrac{y_n + y_m}{2} || = 1 \\ 
+\eQe
+and we are done. \hfill $\qed$
+
 \end{solution}
 
 \newpage
@@ -325,6 +364,28 @@ for any $\alpha \in (0,\infty)$. Suppose $x \neq 0$, and let $r > 0$
 large enough that $C \subset B(0,r)$. Then, it follows that, from $(*)$,
 $\dfrac{r}{||x||}x \in C$, which contradicts the fact that $C \subset B(0,r)$.
 Therefore, $x = 0$ and we are done. \hfill $\qed$
+
+\bigskip
+
+\textbf{(i)} The norm is equivalent 
+
+\textbf{(ii)} Reflexive implies that the space is Banach (so there is no confusion
+with definition). 
+
+We prove the following claim: Let $E$ be Banach space that is reflexive. For
+any normed linear space, defined by an equivalent norm on $E$, is reflexive.
+
+\bigskip
+Consider an equivalent norm. Since the norm is equivalent with the original norm,
+the induced topology is equal to the original topology, 
+hence the dual and induced weak topology coincide as well. We know that
+Banach space is reflexive iff the closed unit ball is weakly compact. Now,
+it suffices to show that, for any topology, compactness of the closed unit ball
+$B_1$ implies, for any $c > 0$, $B_c$ is compact. Suppose $\{U_{\lambda}\}$ 
+is a finite cover of $B_1$. Define $\{\tilde{U}_{\lambda}\}$ by 
+
+ 
+
 \end{solution}
 
 \newpage
@@ -337,9 +398,55 @@ Therefore, $x = 0$ and we are done. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Consider $\{f_n\}$ defined by
+\eQb
+g &\mapsto& \int_{\mathbb{T}} g(t)
+e^{-2\pi i nt} dt = \hat{g}(n) \>\>\> (g \in L^{\infty}(\mathbb{T})) 
+\eQe
+for each $n \geq 1$.
+As $L^{\infty}(\mathbb{T}) \subset L^{1}(\mathbb{T})$, 
+by Riemann-Lebesgue lemma, for any $g \in L^{\infty}(\mathbb{T})$,
+\eQb
+f_n(g) = \hat{g}(n) \to 0. 
+\eQe
+For any $n \geq 1$, $g \in L^{\infty}(\mathbb{T})$ with $||g|| = 1$, 
+\eQb
+|\hat{g}(n)| &\leq& \int_{\mathbb{T}} |g| \leq ||g||_{\infty} = 1,
+\eQe
+Now, for any $n \geq 1$, take $g = e^{2\pi int}$ to see
+\eQb
+|\hat{g}(n)| &=& |\int_{\mathbb{T}} 1dt| = 1,  
+\eQe 
+so, combined with the above estimate, we have
+\eQb
+||f_n|| = 1,
+\eQe
+as required.
 
-It is a well-known fact that $L^{\infty}$ is not separable. The proof can be
-found in the Brezis textbook chapter 4.  
+\bigskip
+
+It is a well-known fact that $L^{\infty}$ is not separable, given 
+that the ambient space is not finite. Instead of appealing to this general result,
+we provide a construction of uncountable family of functions in $L^{\infty}[a,b]$
+with $a <b$ 
+such that the distance is at least 1 apart to contradict the separability assumption.
+Take $[a,b]$ such that $a < b$. Fix $x_0 \in (a,b)$ and consider $
+\mathscr{A} = \{1_{B(x_0,r)} \}$
+where $0 < r \leq \min(x_0-a,b-x_0)$. Then, the family is uncountable, but for 
+any $f,g \in \mathscr{A}$, 
+\eQb
+||f - g||_{\infty} &=& 1.
+\eQe
+Now, suppose the space is separable, hence there exists a countable dense subset
+$C$. Now, observe that
+\eQb
+\bigcup_{x \in \mathscr{A}} B(x,\dfrac{1}{2}) \cap C \subset C,
+\eQe 
+but the left hand side is uncountable, because its an uncountable 
+disjoint union of countable sets. Therefore, $L^{\infty}[a,b]$ is not separable. \hfill
+$\qed$
+
+ 
 \end{solution} 
 
 
