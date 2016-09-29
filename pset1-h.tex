@@ -87,40 +87,42 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-First, define a map $\Phi:Y^{\perp} \to (E \setminus Y)^*$ naturally by
+First, define a map $\Phi:(E \setminus Y)^* \to Y^{\perp}$ naturally by
 \eQb
-f &\mapsto& ([x] \mapsto f(x))
+f &\mapsto& (x \mapsto f([x]))
 \eQe 
-where $[x] \in E\setminus Y$. The map is well-defined, because for any $[x] = [x']$,
+where $[x] \in E\setminus Y$. The map on the RHS is clearly linear and 
+vanishes on $Y$, because for any $y \in Y$, $f([y]) = 0$
+by linearity. The map is bounded as well, since
 \eQb
-x' = x + y \>\> \text{for some} \>\> y \in Y \> \text{and} \>
-f(x') = f(x) + f(y) = f(x).
+|f([x])| &\leq& ||f||||[x]|| \leq ||f||||x|| \>\> (*)
+\eQe 
+for any $x \in E$.
+Now, we show that $\Phi$ is an isometry.  
+It follows that 
+\eQb
+||\Phi(f)|| &=& \sup_{||x|| = 1} |<\Phi(f),x>| = \sup_{||x|| = 1} |f([x])| \\
 \eQe
-We now claim that $\Phi$ is a surjective isometry. By definition, for any $f \in
-Y^{\perp}$,
+Hence, combined with $(*)$, it suffices to show that
 \eQb
-||\Phi(f)|| &=& \sup_{||[x]|| = 1} |<\Phi(f),[x]>| = \sup_{||[x]|| = 1} |<f,x>| \\
-&=& \sup_{\inf_{y \in Y} ||x - y|| = 1} |<f,x>| 
+\sup_{||x|| = 1} |f([x])| &\leq& \sup_{||[x]|| = 1} |f([x])|,
 \eQe 
+but this follows, since $Y$ is closed, so we can choose $\{y_n\} \subset Y$
+such that $\limsup_{n \to \infty}||x + y_n|| \leq 1$.
+Now, we show that $\Phi$ is surjective. Let $l \in Y^{\perp}$. Then, define
+$f:E \setminus Y \to \mathbb{R}$ by
+\eQb
+[x] &\mapsto& l(x).
+\eQe 
+The map is well-defined, since for any $x' \in [x]$ such that $x' = x+y$,
+$l([x']) = l(x + y) = l(x)$. and the map inherits linearity and boundedness
+from $l$. Now, it follows that $\Phi(f) = (x \mapsto f([x]) = (x \mapsto l(x)) = l$, 
+and we are done.
+
+\hfill $\qed$
 
 \bigskip
 
-For sake of completeness, we note that if both pre-image and image are Banach,
-then a surjective isometry is a isometric isomorphism. This is a direct consequence
-of open mapping theorem. First, isometry implies injectivity: for $T \in
-\mathscr{L}(E,F)$ and $x,y \in E$, if $T(x) = T(y)$,
-then $0 = ||T(x-y)|| = ||x-y||$, so $x = y$. Therefore, $T^{-1}$ is well-defined
-as a map. Now, by open mapping theorem, we see that for any $O$ open in $E$,
-$(T^{-1})^{-1}(O) = T(O)$ is open in $F$. Therefore, $T^{-1}$ is continuous as required.
-
-\bigskip
-
-It remains to be shown that $Y^{\perp}$ and $E \setminus Y$ are Banach. Suppose
-$f \in E^*$ such that there exists $\{f_n\} \subset Y^{\perp}$ with $f_n \to f$. It
-suffices to show that for any $y in Y$, we have $<f,y> = 0$. But this is true,
-because norm convergence implies pointwise convergence and for all $n \geq 1$,
-$<f_n,x> = 0$. Now, $E \setminus Y$ is Banach with respect to the quotient norm,
-because  
 
 \end{solution}
 
@@ -134,15 +136,74 @@ because
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-If $x \in \bar{G}$, then $m(x) = 0$,
-and $M(x) = 0$, because by continuity for any $f \in E^*$ such that $f = 0$
-on $G$, it follows that $f = 0$ on $\overline{G}$.
-Suppose $x \in  E \setminus \overline{G}$.  
-
+Fix $x \in E$. For any $y \in G$, and 
+$f \in E^*$ such that $||f|| \leq 1$ with $f = 0$ on $G$,
+\eQb
+|<f,x>| &=& |<f,x-y>| \leq ||f|| ||x-y|| = ||x-y||,
+\eQe
+so 
+\eQb
+m(x) &\geq& \sup_{|f|| \leq 1; f = 0 \> \text{on} \> G} |<f,x>|. 
+\eQe
+Hence, it suffices to show that there exists $f \in E^*$ such that 
+$||f|| \leq 1$ and $f = 0$ on $G$ with $|<f,x>| = m(x)$. We can further assume
+without loss of generality that $x \in E\setminus G$, because 
+if $x \in G$, both sides are trivially $0$. Now, define
+a map $g:G \oplus \mathbb{R}x \to 
+\mathbb{R}$ by $y + \lambda x \mapsto \lambda m(x)$.
+Then, we claim that $g$ is linear. If $z_1 = y_1 + \lambda_1 x$ and
+$z_2 = y_2 + \lambda_2 x$, then 
+\eQb
+g(z_1) + g(z_2) = (\lambda_1 + \lambda_2)x = g(z_1 + z_2).
+\eQe
+If $z = y + \lambda x$ and $\gamma \in \mathbb{R}$, then
+\eQb
+g(\gamma z) = g(\gamma y + \gamma \lambda x) = \gamma \lambda m(x) = \gamma g(z). 
+\eQe
+Note that $g(x) = m(x)$. Now, in view of Hahn-Banach, we certainly need a
+Minkowski functional that bounds $g$ on its domain. We show that $m$ in fact
+is the Minkowski functional. Firstly, 
+\eQb
+m(\lambda v) &=& \inf_{y \in G} ||\lambda v - y|| = |\lambda| \inf_{y \in G} 
+||v - \dfrac{y}{\lambda}|| = |\lambda| m(v)
+\eQe
+for any $\lambda \in \mathbb{R}$ 
+and $v \in E$, because $y \mapsto \dfrac{y}{\lambda}$ is a
+bijection from $G$ to $G$ itself for any $\lambda \in \mathbb{R}$.
+Secondly,
+\eQb
+m(u + v) &=& \inf_{y \in G} ||u + v - y|| \leq \inf_{y \in G} ||u - \dfrac{1}{2}y||
++ \inf_{y \in G} ||v - \dfrac{1}{2} y|| = m(u) + m(v)
+\eQe
+for any $u,v \in E$.  
+where the last equality holds by the same reasoning as above. Finally,
+\eQb
+g(z) &=& g(y + \lambda x) = \lambda m(x) \leq |\lambda|m(x) = m(y + \lambda x) = m(z) 
+\eQe
+for any $z = y + \lambda x \in G$. Therefore, by Hahn-Banach, we can extend $g$
+to the entire domain $E$ and call it $f$. Since
+\eQb
+f(z) \leq m(z) \leq ||z||,
+\eQe 
+for any $z \in E$, it follows that $||f|| \leq 1$, $f = 0$ on $G$ and $|<f,x>| = 0$
+as required. \hfill $\qed$
 
 \bigskip
 
-
+The second part follows similarly. Observe that
+\eQb
+||g||_{G} = \sup_{||y|| \leq 1; y \in G} |<g,y>| = \sup_{||y|| \leq 1; y \in G}
+|<g-h,x>| \leq ||g-h||_{E^*}
+\eQe
+for any $g \in E^*$ and $h \in G^{\perp}$, so
+\eQb
+||g||_{G} &\leq& \inf_{h \in G^{\perp}} ||g-h||_{E^*} 
+\eQe
+for any $g \in E^*$.
+Now, $g$ restricted to $G$ is linear and bounded, so by a corollary of 
+Hahn-Banach, there exists $f$ such that $||f||_{E^*} = ||g||_{G}$. 
+Set $h= g - f$. Since $f = g$ on $G$, $h \in G^{\perp}$, and 
+$||g-h||_{E^*} = ||f||_{E^*} = ||g||_{G}$, so we are done. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -288,33 +349,29 @@ by considering appropriate indicators).
 \begin{solution} \hfill \\
 Without loss of generality, assume $x = 0$ and $x \not \in K$. Let $\{y_n\}$
 be the minimizing sequence. As $E$ is Banach, and $K$ is closed, it suffices to 
-show that $\{y_n\}$ is cauchy. We claim that, it suffices to show, 
+show that $\{y_n\}$ is cauchy. Let $d = \lim_{n \to \infty}||y_n||$. 
+We claim that 
 \eQb
-||\dfrac{x_n + x_m}{2}|| \to 1 \>\>\> \text{as} \>\>\> n,m \to \infty \>\> (*)
-\eQe 
-By uniform convexity assumption, the above implies that $\{x_n\}$ is cauchy.
-Now, it follows that that $\{y_n\}$ is cauchy.
-
-\bigskip
-
-Now, we prove $(*)$. 
-by convexity of $K$, for any $n,m \geq 1$,
-\eQb
-d \leq ||\dfrac{y_n + y_m}{2}|| \leq ||\dfrac{y_n}{2}|| + ||\dfrac{y_m}{2}|| 
+||\dfrac{x_n + x_m}{2}|| \to 1 \>\>\> \text{as} \>\>\> n,m \to \infty. 
 \eQe
-so
+For each $n,m \geq 1$,
 \eQb
-||\dfrac{y_n + y_m}{2}|| \to d \>\>\> &\text{as}& \>\> n,m \to \infty.
+||\dfrac{x_n + x_m}{2}|| &=& \dfrac{1}{2} 
+\dfrac{||y_m||+||y_n||}{||y_n||||y_m||}|| \dfrac{||y_m||y_n}{||y_n|| + ||y_m||}
++ \dfrac{||y_n||y_m}{||y_n|| + ||y_m||}|| \\
+&\leq& \dfrac{1}{2} \dfrac{||y_m||+ ||y_n||}{||y_n||||y_m||}d 
 \eQe
-Then,
+by convexity of $K$.
+The RHS goes to 
+$1$ as $n,m \to \infty$ via $d = \lim_{n \to \infty} ||y_n||$ condition, and 
+$||\dfrac{x_n + x_m}{2}|| \geq 1$. We have shown the claimed limit. Now,
+by uniform convexity, 
+$\{x_n\}$ is cauchy. Observe that
 \eQb
-\lim_{n,m \to \infty} ||\dfrac{x_n + x_m}{2}|| &=& 
-||\lim_{n \to \infty}\dfrac{y_n}{2||y_n||} + \lim_{n \to \infty}\dfrac{y_m}{2||y_m||}||
-= \dfrac{1}{d} ||\lim_{n\to \infty} \dfrac{y_n}{2} + \lim_{m \to \infty}
-\dfrac{y_m}{2}|| \\ 
-&=& \dfrac{1}{d} \lim_{n,m \to \infty} || \dfrac{y_n + y_m}{2} || = 1 \\ 
+||y_n - y_m|| &\leq& ||y_n||||x_n - x_m|| + | ||y_n|| - ||y_m|| | ||x_m||
 \eQe
-and we are done. \hfill $\qed$
+for each $n,m \geq 1$. Since the RHS goes to $0$ as $n,m \to \infty$, it implies that
+$\{y_n\}$ is cauchy and we are done. \hfill $\qed$
 
 \end{solution}
 
@@ -348,7 +405,7 @@ which completes the proof of absolute homogeneity.
 
 Now, observe that, for any $0 <\alpha < \beta$, and $x \in E$, 
 \eQb
-\alpha^{-1}x \in C &\implies \beta^{-1}x \in C,
+\alpha^{-1}x \in C &\implies \beta^{-1}x \in C, \>\>\> (**)
 \eQe
 because by convexity
 \eQb
@@ -367,7 +424,26 @@ Therefore, $x = 0$ and we are done. \hfill $\qed$
 
 \bigskip
 
-\textbf{(i)} The norm is equivalent 
+\textbf{(i)} The new norm is equivalent with the original norm. Choose $r > 0$
+such that $\overline{B(0,r)} \subset O$. Then,  
+\eQb
+\dfrac{r}{||x||} &\in& B(0,r) \subset O
+\eQe 
+and 
+\eQb
+rp(x) &\leq& ||x||
+\eQe
+for any $x \in E$.
+For the other direction, choose $R > 0$ such that $O \subset B(0,R)$ with
+$\partial B(0,R) \cap O = \emptyset$. Then,
+\eQb
+\dfrac{R}{||x||} x &\not\in& O
+\eQe
+for any $x \in E$. By the contrapositive of $(**)$, it follows that
+\eQb
+||x|| &\leq& R p(x)
+\eQe
+for any $x \in E$. Hence, the claimed norm equivlaence holds.
 
 \textbf{(ii)} Reflexive implies that the space is Banach (so there is no confusion
 with definition). 
@@ -376,13 +452,33 @@ We prove the following claim: Let $E$ be Banach space that is reflexive. For
 any normed linear space, defined by an equivalent norm on $E$, is reflexive.
 
 \bigskip
-Consider an equivalent norm. Since the norm is equivalent with the original norm,
-the induced topology is equal to the original topology, 
-hence the dual and induced weak topology coincide as well. We know that
-Banach space is reflexive iff the closed unit ball is weakly compact. Now,
-it suffices to show that, for any topology, compactness of the closed unit ball
-$B_1$ implies, for any $c > 0$, $B_c$ is compact. Suppose $\{U_{\lambda}\}$ 
-is a finite cover of $B_1$. Define $\{\tilde{U}_{\lambda}\}$ by 
+Let $Q$ be a norm on $E$ such that $E$ is reflexive, and $P$ be a norm
+that is equivalent to $Q$. Since the topology induced by $Q$ and $P$ are the same,
+we have that $E_{Q}^* = E_{P}^*$, which we denote as $E^*$. Now, we claim that
+the dual norms $Q^*$ and $P^*$ on $E^*$, induced by $Q$ and $P$ are again equvialent.
+From the norm equivalence and defintion of dual norm, 
+\eQb
+|f(x)| &\leq& Q^{*}(f) Q(x) 
+\eQe
+and
+\eQb
+|f(x)| &\leq& Q^{*}(f) C P(x)
+\eQe
+for some $C > 0$, and for any $f \in E^*$ and $x \in E$. Therefore, 
+\eQb
+P^{*}(f) &\leq& CQ^{*}(f) 
+\eQe
+for any $f \in E^*$. The other direction can be shown similarly, so we have shown
+that the induced dual norms are again equvialent.
+Now, by the same argument as above, we see that $E_{Q}^{**} = E_{P}^{**}$,
+from which it follows that $J_{Q} = J_{P}$. Therefore, by reflexivity assumption,
+we have
+\eQb
+E_{P}^{**} &=& E_{Q}^{**} = J_{Q}(E) = J_{P}(E)
+\eQe  
+which shows that $(E,P)$ is reflexive as required. Therefore, we have shown that
+the new norm is reflexive, whenever the original norm is reflexive. \hfill $\qed$  
+
 
  
 
@@ -427,9 +523,10 @@ as required.
 
 It is a well-known fact that $L^{\infty}$ is not separable, given 
 that the ambient space is not finite. Instead of appealing to this general result,
-we provide a construction of uncountable family of functions in $L^{\infty}[a,b]$
+we provide a construction of an uncountable family of functions in $L^{\infty}[a,b]$
 with $a <b$ 
-such that the distance is at least 1 apart to contradict the separability assumption.
+such that the distance is at least 1 apart between any two elements
+to contradict the separability assumption.
 Take $[a,b]$ such that $a < b$. Fix $x_0 \in (a,b)$ and consider $
 \mathscr{A} = \{1_{B(x_0,r)} \}$
 where $0 < r \leq \min(x_0-a,b-x_0)$. Then, the family is uncountable, but for 
