@@ -136,8 +136,9 @@ so
 \eQb
 |p(a_k x_k)| &<& 2\epsilon,
 \eQe
-which contradicts $(*)$.  
-
+which contradicts $(*)$. By (i), $p(0) \leq 2p(0)$, and $p(0) \leq p(x_n) + 
+p(-x_n) $ for all $n \geq 1$, so $p(0) \leq 0$. Therefore, $p(0) = 0$. 
+\hfill $\qed$ 
 
 
 \end{solution}
@@ -152,6 +153,28 @@ which contradicts $(*)$.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Define a map $T$ on $E$ by 
+\eQb
+x \mapsto T_x \>\>\> \text{with} \>\>\> <T_x,y> = a(x,y).
+\eQe
+By (i), $T_x$ is bounded for all $x \in E$, so $T$ maps $E$
+into $F^*$. We now show that $T$ is bounded. 
+Fix $y \in F$. Observe that
+\eQb
+\{ <Tx,y> \> : \> x \in B_{E}(0,1) \} &=& \{ a(x,y) \> : \> x \in B_E(0,1) \}
+\eQe
+is bounded by (ii). Therefore, by Corollary 2.5, which follows from
+Uniform boundedness principle, $T$ is bounded. 
+Now, by the boundedness of $T$, there 
+exists $C > 0$ such that
+\eQb
+\sup_{y \in F; ||y|| \neq 0} \dfrac{|a(x,y)|}{||y||} = ||T_x|| \leq C||x||
+\eQe
+for any $x \in E$, and hence
+\eQb
+a(x,y) \leq C ||x|| ||y||
+\eQe
+for any $x \in E$ and $y \in F$. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -164,6 +187,29 @@ which contradicts $(*)$.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Suppose that $T(M)$ is closed. Then, by continuity of $T$,
+\eQb
+M + N(T) = T^{-1}(T(M)) \>\>\> \text{is closed}.
+\eQe
+Conversely, suppose that $M + N(T)$ is closed. We contend that
+\eQb
+T((M + N(T))^c) = T(M)^c. \>\>\> (*) 
+\eQe 
+Let $x \in T(M + N(T)^c)$. Then, there exists $y \in (M + N(T))^c$, 
+such that $T(y) = x$. Suppose for sake of contradiction that $x \in T(M)$. 
+Then, there exists $x_0 \in M$, such that $T(x_0) = y$, and by linearity of $T$,
+$x - x_0 \in N(T)$, so $x \in M + N(T)$, a contradiction. 
+For the other inclusion, let $x \in T(M)^c$. By surjectivity of $T$,
+there exists $z \in E$ such that $T(z) = x$. Suppose for sake of contradiction
+that $z = m + n$ with some $m \in M$ and $n \in N(T)$. By linearity of $T$,
+\eQb
+x = T(z) = T(m), 
+\eQe 
+which contradicts that $x \in T(M)^c$. Therefore, (*) is true.
+To conclude, observe that,
+by open mapping theorem, $T(M)^c$ is open, so $T(M)$ is closed.
+Now, (ii) follows from the problem 5 and (i). \hfill $\qed$
+
 \end{solution}
 
 \newpage
@@ -176,6 +222,36 @@ which contradicts $(*)$.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(1)}
+Let $\tilde{E} = E / N(T)$, $\pi$ be the canonical quotient map,
+and $\tilde{T}:E / N(T) \to F$ such that $T = \tilde{T} \circ \pi$.
+From definition, we know that $\tilde{T}$ is linear, injective, and $R(T) 
+= R(\tilde{T})$. 
+
+\smallskip
+
+Suppose the given estimate holds. We claim that $R(\tilde{T})$ is closed, then by 
+$R(T) = R(\tilde{T})$, we will be done. Observe that 
+\eQb
+||[x]|| = d(x,N(T)) \leq C||Tx|| = C||\tilde{T}[x]|| (*)
+\eQe  
+for all $x \in E$. Suppose $\{y_n\} \subset R(\tilde{T})$ such that $y_n \to y$ for some
+$y$. Then, there exists 
+$\{[x_n]\} \subset \tilde{E}$. By the above estimate, $\{[x_n]\}$ is
+cauchy, and by continuity $\tilde{T}[x_n] \to \tilde{T}[x]$ where $[x]$ is the
+limit of $\{[x_n]\}$. Therefore, $R(\tilde{T})$ is closed. 
+
+Suppose $R(T)$ is closed. Then, $R(\tilde{T})$ is closed, and hence Banach.
+Since $\tilde{T}$ is bijective, by Corollary 2.7, $\tilde{T}^{-1}$ is continuous so 
+we again have (*).
+
+\bigskip
+
+\textbf{(2)} Consider $D(A)$ with graph norm. Then, as $A$ is closed, $D(A)$ is 
+Banach. Since graph norm only increases the norm from each norm, $T$ is bounded
+and by (1) we are done.
+
+
 \end{solution}
 
 \newpage
@@ -188,6 +264,21 @@ which contradicts $(*)$.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Let $\pi$ be the canonical projection of $E$ onto $E / G$. As $L$
+is finite dimensional space, we see that $\pi(L)$ is finite dimensional, hence
+closed.  
+By continuity of $\pi$, it follows that $\pi^{-1}(\pi(L)) = G + L$ is closed.
+
+\bigskip
+
+Suppose $G$ admits a complement $H$ in $E$. Let $\pi_G$ and $\pi_H$ be canonical  
+projections of $G$ and $H$ respectively. Observe that
+$\pi_H(L)$ is finite dimensional, so it admits a complement $A \subset H$
+in $H$. We claim that $A$ is a complement of $G + L$. Note that $A$ is closed
+trivially. 
+
+
+
 \end{solution}
 
 \newpage
@@ -200,6 +291,36 @@ which contradicts $(*)$.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+For convenience, we identify $\mathbb{T}$ with $[0,2\pi]$ and consider $0$ as the point,
+where we study the divergence.
+Let $\{\phi_n\}$ be a collection of continuous, linear functionals (standard property
+of Fourier series), defined on $C(\mathbb{T})$ given by 
+\eQb
+\phi_n(f) &=& S_n(f,0)
+\eQe
+for all $f \in C(\mathbb{T})$ and $n \in \mathbb{N}$. Suppose for a moment that
+$\{\phi_n\}$ are not uniformly bounded. Then, by uniform boundedness principle,
+there exists $f \in C(\mathbb{T})$ such that $\{\phi_n(f)\}$ is not bounded. 
+
+We now show that $\{|\phi_n|\}$
+is not bounded. Since $|\sin(t)| \leq t$
+for any $t \in [0,2\pi]$, 
+\eQb
+\int_{0}^{2\pi} |\dfrac{\sin(n+\frac{1}{2})x}{\sin(\frac{x}{2})}| dx &\geq&
+\int_{0}^{2\pi} |\sin(n + \frac{1}{2})x| \frac{2}{x} dx = \int_{0}^{2\pi(n+\frac{1}{2})}
+|\sin(x)| \dfrac{2}{x} dx \\
+&\geq& \sum_{k=1}^{n} \dfrac{1}{k} \int_{2\pi(k-1)}^{2\pi k} |\sin(x)|dx \geq 
+\sum_{k=1}^{n} \dfrac{1}{k}  
+\eQe
+for all $n \in \mathbb{N}$. 
+The above estimate shows that the $L^1$ norms of the n-th Dirichlet kernels associated 
+with $\phi_n$ diverges to $\infty$. Now, it is well-known 
+that the functional norm of $\phi_n$
+is exactly the $L^1$ norm of the n-th Dirichlet kernel for all $n \in \mathbb{N}$.
+This can be formally shown by considering the sign of the kernel as the continuous
+function, and using DCT to swap the order of limit and integration.
+\hfill $\qed$
+
 \end{solution}
 
 \newpage

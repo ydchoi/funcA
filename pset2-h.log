@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 OCT 2016 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 OCT 2016 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,83 +562,61 @@ Package pdftex.def Info: funcA-h-e2-p1.png used on input line 86.
 File: funcA-h-e2-p2.png Graphic file (type png)
 
 <use funcA-h-e2-p2.png>
-Package pdftex.def Info: funcA-h-e2-p2.png used on input line 151.
+Package pdftex.def Info: funcA-h-e2-p2.png used on input line 152.
 (pdftex.def)             Requested size: 278.23827pt x 67.96262pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-[3 <./funcA-h-e2-p2.png>] <funcA-h-e2-p3.png, id=37, 611.28375pt x 136.51pt>
+ [3 <./funcA-h-e2-p2.png>]
+<funcA-h-e2-p3.png, id=37, 611.28375pt x 136.51pt>
 File: funcA-h-e2-p3.png Graphic file (type png)
-
-<use funcA-h-e2-p3.png>
-Package pdftex.def Info: funcA-h-e2-p3.png used on input line 163.
+ <use funcA-h-e2-p3.png>
+Package pdftex.def Info: funcA-h-e2-p3.png used on input line 186.
 (pdftex.def)             Requested size: 278.23827pt x 62.13506pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
 
 [4 <./funcA-h-e2-p3.png>] <funcA-h-e2-p4.png, id=44, 608.2725pt x 109.40875pt>
 File: funcA-h-e2-p4.png Graphic file (type png)
 
 <use funcA-h-e2-p4.png>
-Package pdftex.def Info: funcA-h-e2-p4.png used on input line 175.
+Package pdftex.def Info: funcA-h-e2-p4.png used on input line 221.
 (pdftex.def)             Requested size: 278.23827pt x 50.04648pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-
- []
-
-[5 <./funcA-h-e2-p4.png>] <funcA-h-e2-p5.png, id=51, 618.31pt x 71.26625pt>
+ [5 <./funcA-h-e2-p4.png>]
+<funcA-h-e2-p5.png, id=51, 618.31pt x 71.26625pt>
 File: funcA-h-e2-p5.png Graphic file (type png)
-
-<use funcA-h-e2-p5.png>
-Package pdftex.def Info: funcA-h-e2-p5.png used on input line 187.
+ <use funcA-h-e2-p5.png>
+Package pdftex.def Info: funcA-h-e2-p5.png used on input line 263.
 (pdftex.def)             Requested size: 278.23827pt x 32.07059pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
 
 [6 <./funcA-h-e2-p5.png>]
 <funcA-h-e2-p6.png, id=58, 615.29875pt x 171.64125pt>
 File: funcA-h-e2-p6.png Graphic file (type png)
  <use funcA-h-e2-p6.png>
-Package pdftex.def Info: funcA-h-e2-p6.png used on input line 199.
+Package pdftex.def Info: funcA-h-e2-p6.png used on input line 290.
 (pdftex.def)             Requested size: 278.23827pt x 77.61758pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
 
 [7 <./funcA-h-e2-p6.png>] <funcA-h-e2-p7.png, id=66, 610.28pt x 167.62625pt>
 File: funcA-h-e2-p7.png Graphic file (type png)
 
 <use funcA-h-e2-p7.png>
-Package pdftex.def Info: funcA-h-e2-p7.png used on input line 211.
+Package pdftex.def Info: funcA-h-e2-p7.png used on input line 332.
 (pdftex.def)             Requested size: 278.23827pt x 76.42607pt.
  [8 <./funcA-h-e2-p7.png>]
 <funcA-h-e2-p8.png, id=73, 616.3025pt x 281.05pt>
 File: funcA-h-e2-p8.png Graphic file (type png)
  <use funcA-h-e2-p8.png>
-Package pdftex.def Info: funcA-h-e2-p8.png used on input line 234.
+Package pdftex.def Info: funcA-h-e2-p8.png used on input line 355.
 (pdftex.def)             Requested size: 278.23827pt x 126.8873pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
 [9 <./funcA-h-e2-p8.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (./pset2-h.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `pset2-h.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 365.
  ) 
 Here is how much of TeX's memory you used:
  10292 strings out of 493089
@@ -662,7 +640,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf
 exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb>
-Output written on pset2-h.pdf (9 pages, 482017 bytes).
+Output written on pset2-h.pdf (9 pages, 499878 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
