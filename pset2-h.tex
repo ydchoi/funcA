@@ -252,6 +252,7 @@ Banach. Since graph norm only increases the norm from each norm, $T$ is bounded
 and by (1) we are done.
 
 
+
 \end{solution}
 
 \newpage
@@ -271,12 +272,25 @@ By continuity of $\pi$, it follows that $\pi^{-1}(\pi(L)) = G + L$ is closed.
 
 \bigskip
 
+Suppose $G+L$ admits a complement $A$ in $E$. Since $G \cap L$ is finite dimensional,
+it admits a complement $B$ in $L$. $A+B$ is closed by (i). 
+We claim that $A +B$ is the complement of $G$. If $g \in A+B \cap G$, then
+$g = a+b$ for some $b \in B$ and $a \in A$. By re-arranging, we see that 
+$a = 0$ and $g = 0$. Therefore, it follows that for any $x \in A$, we can express it
+as an unique sum of an element in $A+B$ and $G$, so $A+B$ is a complement of $G$.
+
+
+
+\bigskip
+
 Suppose $G$ admits a complement $H$ in $E$. Let $\pi_G$ and $\pi_H$ be canonical  
 projections of $G$ and $H$ respectively. Observe that
 $\pi_H(L)$ is finite dimensional, so it admits a complement $A \subset H$
 in $H$. We claim that $A$ is a complement of $G + L$. Note that $A$ is closed
-trivially. 
-
+trivially. Suppose $x \in A \cap G+L$. Then, $x = g+l$ for some $g \in G$ 
+and $l \in L$. By projection properties, one can see that $x = 0$, and again 
+see that $x$ can be written as a unique sum of an element in $G+L$ and $A$
+which completes the proof. \hfill $\qed$
 
 
 \end{solution}
