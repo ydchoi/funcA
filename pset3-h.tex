@@ -25,6 +25,19 @@
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 
+\newcommand{\joverline}[2]{%
+  \mathord{% make sure we're in math mode
+    \vbox{\offinterlineskip
+      \halign{##\cr
+        \hrulefill$\,\scriptscriptstyle#1\,$\hrulefill\cr
+        \noalign{\kern.3ex}
+        $#2$\cr
+      }%
+    }%
+  }%
+}
+
+
 \def\Qb#1\Qe{\begin{question}#1\end{question}}
 \def\Sb#1\Se{\begin{solution}#1\end{solution}}
 
@@ -123,14 +136,54 @@ we are done.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-By Banach-Alaoglu, $B_{E^*}$ is weak-* compact, and we claim that $M^{\perp}$ is
-closed in weak-*, because $M^{\perp}$ is closed in strong topology in $E^*$. 
-Let $f \in E^*$ such that there exists $\{f_n\} \subset M^{\perp}$ with 
-$f_n to f$ strongly. Then,
+Observe that
 \eQb
-\lim_{n \to \infty} <f_n,x> = <f,x>. 
+M^{\perp} &=& \{ g \in E^* : <g,x> = 0 \> \forall x \in M\} \\ 
+&=& \bigcap_{x \in M} \{g \in E^* : <g,x> = 0 \}  
+= \bigcap_{x \in M} J(x)^{-1}(0) 
+\eQe
+where $J$ is the natural embedding.
+Hence, $M^{\perp}$ is weak-* closed. Now, choose $\{g_n\} \subset M^{\perp}$ such that
+\eQnb
+||f_0 - g_n|| \to \inf_{g \in M^{\perp}} 
+||f_0 - g||  \>\>\> \text{as} \>\>\>  n  \to \infty. \label{eq:2.1}
+\eQne
+Fix $\epsilon > 0$. From above, 
+\eQb
+||g_n|| &\leq& ||f_0|| + ||f_0 - g_n||
+\leq ||f_0|| + c + \epsilon
 \eQe 
+for $n$ large enough. Therefore, $\{g_n\}$ is bounded in the dual norm. Now, 
+consider $A = \overline{{\{g_n\}}}^{\text{weak-*}} \subset M^{\perp}$, where 
+the second inclusion follows from the weak-* closure of $M^{\perp}$.
 
+\bigskip
+
+We now claim that any bounded $B \subset E^*$ is weak-* precompact. Choose $\lambda >0$
+such that $||b|| \leq \lambda$ for all $b \in B$. Then,
+\eQb
+\dfrac{1}{\lambda} B \subset B_{E^*} \>\>\> \text{and} \>\>\> \overline{{\dfrac{1}{
+\lambda}B}}^{\text{weak}-*} \subset B_{E^*}
+\eQe  
+since $B_{E^*}$ is compact in weak-* and since weak-* is Hausdorff, which implies that
+it is closed. As closed subset of compact set is compact and $x \mapsto 
+\dfrac{1}{\lambda}x$ is a homeomorphism, 
+$\dfrac{1}{\lambda} B$ is pre-compact, and $B$ is precompact.
+ 
+\bigskip
+
+From the above result,
+$A$ is weak-* compact. Now, consider the map $\Phi:A \to \mathbb{R}$ defined by
+\eQb
+g &\mapsto& ||f_0 - g|| \>\>\>\> (g \in A).
+\eQe
+By lower semi-continuity of dual norm with respect to weak-* topology, $\Phi$
+is lower semi-continuous as well. Hence, 
+there exists $g_0 \in A$ such that
+\eQb
+||f_0 - g_0|| &=& \inf_{g \in A} ||f_0 - g|| = \inf_{g \in M^{\perp}} ||f_0 - g||
+\eQe
+where the last equality holds by ~\eqref{eq:2.1}. 
 
 \end{solution}
 
@@ -144,6 +197,7 @@ $f_n to f$ strongly. Then,
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+
 \end{solution}
 
 \newpage
@@ -173,7 +227,8 @@ $\{x_i\}_{i \in I}$. Define $g:G \to \mathbb{R}$ by
 g(x) &=& \sum_{i \in J} \beta_i \alpha_i 
 \eQe
 where $x = \sum_{i \in J} \beta_i x_i$. $g$ is well-defined and bounded by assumption
-(B). Now, extend $g$ to the whole of $E$ by corollary of 
+(B). Now, extend $g$ to the whole of $E$ by corollary 1.2 of Hahn Banach, and 
+we are done. \hfill $\qed$ 
 
 \end{solution}
 
@@ -187,6 +242,7 @@ where $x = \sum_{i \in J} \beta_i x_i$. $g$ is well-defined and bounded by assum
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(i)}
 Let $f:E \to \mathbb{R}$ be defined by
 \eQb
 <f,x> &=& \lim_{n \to \infty} <f_n,x> \>\>\> (x \in E).
@@ -199,13 +255,43 @@ Then, $f$ is linear, because by linearty of $\{f_n\}$,
 for any $x,y \in E$ and
 \eQb
 <f,\lambda x> &=& \lim_{n \to \infty} <f_n,\lambda x> = \lambda \lim_{n \to \infty}
-<f,x> 
+<f_N,x> = \lambda <f,x> 
 \eQe
-for any $\lambda \in \mathbb{R}$ and $x \in E$. If we show that $f$ is bounded,
-or continuous then we are done, since
+for any $\lambda \in \mathbb{R}$ and $x \in E$. Now, we prove the boundedness of $f$.
+By the pointwise convergence,
 \eQb
-f_n \to f \>\>\> \text{in weak-*} &\iff& <f_n,x> \to <f,x> \text{as}
+\sup_{n} |<f_n,x>| < \infty
+\eQe
+for all $x \in E$. 
+Therefore, by uniform boundedness principle, there exists $C > 0$
+such that
+\eQb
+|<f_n,x>| &\leq& C||x||
+\eQe
+and hence
+\eQb
+|<f,x>| &\leq& |<f_n,x>| + |<f_n,x> - <f,x>| \\
+&\leq& C||x|| + |<f_n,x> - <f,x>| 
 \eQe 
+for any $x \in E$ and $n \geq 1$. Now, letting $n \to \infty$ gives 
+\eQb
+|<f,x>| &\leq& C||x||
+\eQe
+for any $x \in E$. 
+Therefore, $f \in E^*$ such that 
+\eQb
+<f_n, x> \to <f,x> \>\>\> \text{as} \>\>\> n \to \infty 
+\eQe
+for any $x \in E$, which implies
+\eQb
+f_n \to_{\text{weak}-*} f \>\>\> \text{as} \>\>\> n \to \infty.
+\eQe
+
+\bigskip
+
+\textbf{(ii)}
+
+
 \end{solution}
 
 \newpage
@@ -218,6 +304,8 @@ f_n \to f \>\>\> \text{in weak-*} &\iff& <f_n,x> \to <f,x> \text{as}
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+By 3.16-1, it suffices to obtain a subsequence of $\{f_n\}$
+such that $\{f_n\}$ converge pointwise everywhere.
 As $E$ is separable, there exists $\{a_i\}$, 
 a dense countable subset of $E$. 
 Since $\{f_n\}$ are bounded in $E^*$, $\{<f_{n}, a_1> \}$ is bounded in $\mathbb{R}$.
@@ -238,17 +326,27 @@ Then, by choice
 \eQb
 \lim_{l \to \infty} <g_l, a_i> \>\>\> \text{exists}
 \eQe 
-for any $i \in \mathbb{N}$. Let $g:E \to \mathbb{R}$ such that
+for any $i \in \mathbb{N}$. Now, let $a \in E$, and $\epsilon > 0$.
+Choose $a_i$ such that $||a_i - a|| < \epsilon$. Then,
+\eQnb
+|<g_n,a> - <g_m,a>| &\leq& |<g_n, a> - <g_n,a_i>| + |<g_m, a_i> - <g_m, a>|
+\nonumber \\
+&+& |<g_n, a_i> - <g_m,a_i>| \nonumber \\
+&\leq& |<g_n, a - a_i>| + |<g_m, a_i - a>|  \label{eq:6.1} \\ 
+&+& |<g_n, a_i> - <g_m,a_i>| \nonumber \\
+&\leq& 2C\epsilon + |<g_n, a_i> - <g_m,a_i>| \label{eq:6.2} 
+\eQne
+for all $n,m \geq 1$, where~\eqref{eq:6.1} holds by linearity, 
+and~\eqref{eq:6.2} holds by the choice of $a_i$
+and $C$ being the bound on the $\{f_n\}$ in the dual norm. Therefore, 
 \eQb
-<g , a_i> &=& \lim_{l \to \infty} <g_l, a_i>
+|<g_n,a> - <g_m,a>| &\leq& (2C + 1)\epsilon
 \eQe 
-for all $i \in \mathbb{N}$, and for any $x \in E \setminus \{a_i\}$, 
-by density of $\{a_i\}$,
-choose $\{a_p\} \subset \{a_i \}$ such that $\lim_{p \to \infty} a_p = x$ and 
+for all $n,m$ large enough, and hence, we have shown that 
 \eQb
-<g,x> &=& \lim_{p \to \infty} <g, a_p>. 
-\eQe
-This is well-defined, and $g \in E^*$. By definition,
+<g_l, a> \>\>\> \text{converges to a limit} \>\>\> \text{as} \>\>\> l \to \infty 
+\eQe 
+for any $a \in E$. Hence, we are done. \hfill $\qed$
  
 
 \end{solution}
