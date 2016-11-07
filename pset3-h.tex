@@ -142,48 +142,36 @@ M^{\perp} &=& \{ g \in E^* : <g,x> = 0 \> \forall x \in M\} \\
 &=& \bigcap_{x \in M} \{g \in E^* : <g,x> = 0 \}  
 = \bigcap_{x \in M} J(x)^{-1}(0) 
 \eQe
-where $J$ is the natural embedding.
-Hence, $M^{\perp}$ is weak-* closed. Now, choose $\{g_n\} \subset M^{\perp}$ such that
-\eQnb
-||f_0 - g_n|| \to \inf_{g \in M^{\perp}} 
-||f_0 - g||  \>\>\> \text{as} \>\>\>  n  \to \infty. \label{eq:2.1}
-\eQne
-Fix $\epsilon > 0$. From above, 
+where $J$ is the natural embedding. Hence, $M^{\perp}$ is weak-* closed. 
+Choose $r_0 > 0$ such that 
 \eQb
-||g_n|| &\leq& ||f_0|| + ||f_0 - g_n||
-\leq ||f_0|| + c + \epsilon
-\eQe 
-for $n$ large enough. Therefore, $\{g_n\}$ is bounded in the dual norm. Now, 
-consider $A = \overline{{\{g_n\}}}^{\text{weak-*}} \subset M^{\perp}$, where 
-the second inclusion follows from the weak-* closure of $M^{\perp}$.
-
-\bigskip
-
-We now claim that any bounded $B \subset E^*$ is weak-* precompact. Choose $\lambda >0$
-such that $||b|| \leq \lambda$ for all $b \in B$. Then,
-\eQb
-\dfrac{1}{\lambda} B \subset B_{E^*} \>\>\> \text{and} \>\>\> \overline{{\dfrac{1}{
-\lambda}B}}^{\text{weak}-*} \subset B_{E^*}
-\eQe  
-since $B_{E^*}$ is compact in weak-* and since weak-* is Hausdorff, which implies that
-it is closed. As closed subset of compact set is compact and $x \mapsto 
-\dfrac{1}{\lambda}x$ is a homeomorphism, 
-$\dfrac{1}{\lambda} B$ is pre-compact, and $B$ is precompact.
- 
-\bigskip
-
-From the above result,
-$A$ is weak-* compact. Now, consider the map $\Phi:A \to \mathbb{R}$ defined by
+A &:=& B(f_0,r_0) \cap M^{\perp} \neq \emptyset.
+\eQe
+where $B(f_0, r_0)$ denotes closed ball of radius $r_0$ around $f_0$. Since 
+closed balls are weak-* closed, $A$ is bounded and weak-* closed. Therefore,
+by Banach-Alaoglu, $A$ is weak-* compact. 
+Now, consider the map $\Phi:A \to \mathbb{R}$ defined by
 \eQb
 g &\mapsto& ||f_0 - g|| \>\>\>\> (g \in A).
 \eQe
-By lower semi-continuity of dual norm with respect to weak-* topology, $\Phi$
-is lower semi-continuous as well. Hence, 
-there exists $g_0 \in A$ such that
+Observe that
+\eQb
+\{g \in A \> : \> \Phi(g) \leq \lambda \} &=& 
+\{g \in A \> : \> ||f_0 - g|| \leq \lambda\} = 
+B(f_0,\lambda) \cap A 
+\eQe 
+which is weak-* closed for all $\lambda \in \mathbb{R}$.
+Hence, $\Phi$ is weak-* lsc, 
+so there exists $g_0 \in A \subset M^{\perp}$ such that
 \eQb
 ||f_0 - g_0|| &=& \inf_{g \in A} ||f_0 - g|| = \inf_{g \in M^{\perp}} ||f_0 - g||
 \eQe
-where the last equality holds by ~\eqref{eq:2.1}. 
+where the last equality holds by the choice of $A$.
+
+\smallskip
+
+In general, one should remark that Banach-Alaoglu implies that the dual norm
+is lsc with respect to the weak-* topology. \hfill $\qed$
 
 \end{solution}
 
@@ -198,6 +186,7 @@ where the last equality holds by ~\eqref{eq:2.1}.
 \end{question}
 \begin{solution} \hfill \\
 
+
 \end{solution}
 
 \newpage
@@ -210,7 +199,9 @@ where the last equality holds by ~\eqref{eq:2.1}.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-$(A) \implies (B)$ is obvious. For a moment, we assume the result of exercise 1.10
+$(A) \implies (B)$ is obvious. Fix $J$ finite, and $\{beta_i\}_{i \in J}$.
+Then, use definition of norm and $(A)$, we get $(B)$.
+For a moment, we assume the result of exercise 1.10
 in Brezis.
 Suppose (B) is true. Then, by 1.10, there exists $\phi_0 \in E^{**}$ such that 
 \eQb
@@ -290,6 +281,44 @@ f_n \to_{\text{weak}-*} f \>\>\> \text{as} \>\>\> n \to \infty.
 \bigskip
 
 \textbf{(ii)}
+Set $\Phi:E^* \to \mathbb{R}$ by
+\eQb
+\Phi(f) &=& \lim_{n \to \infty} <f,x_n>.
+\eQe
+With uniform boundedness, and explicitly computing the limits 
+as from above, $\Phi \in E^{**}$. Since the space is
+reflexive, there exists $x \in E$ such that $J(x) = \Phi$. Then, by choice,
+\eQb
+<f,x_n> \to <f,x> \>\>\> \text{as} \>\>\> n \to \infty.
+\eQe
+therefore, $x_n \to_{\text{weak}} x$ as $n \to \infty$.
+
+\bigskip
+
+\textbf{(iii)} Let $E = C_0 \subset l^{\infty}$. Then, ${C_0}^{*} = l^1$, and
+${C_0}^{**} = l^{\infty} \neq C_0$. Consider $\{x_n\}$ as in the hint. Let $u 
+\in l^1$. Then,
+\eQb
+<u,x_n> &=& \sum_{k=1}^{n} u_k  
+\eQe 
+for all $n \geq 1$, and hence
+\eQb
+\lim_{n \to \infty} <u,x_n> &=& \sum_{k=1}^{\infty} u_k 
+\eQe
+which converges as $u \in l^1$. Hence, the hypothesis of (ii) is satisfied,
+except for the fact that $E$ is not reflexive. Note that the i-th projections
+$\{p_i\}$ are all trivially continuous. For $x_n$ to converge weakly to $x$,
+it is necessary that
+\eQb
+\lim_{n \to \infty} <p_i,x_n> = x^{i} 
+\eQe 
+and hence
+\eQb
+x^{i} = 1
+\eQe
+for all $i \geq 1$.
+As $x = (1,1,1,...) \not\in C_0$, there cannot exist $x \in E$ such that 
+$x_n \to_{\text{weakly}} \to x$. \hfill $\qed$ 
 
 
 \end{solution}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 NOV 2016 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 NOV 2016 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,54 +565,54 @@ File: funcA-h-e3-p2.png Graphic file (type png)
 Package pdftex.def Info: funcA-h-e3-p2.png used on input line 135.
 (pdftex.def)             Requested size: 278.23827pt x 95.56093pt.
  [2 <./funcA-h-e3-p2.png>]
-<funcA-h-e3-p3.png, id=37, 618.31pt x 109.40875pt>
+<funcA-h-e3-p3.png, id=35, 618.31pt x 109.40875pt>
 File: funcA-h-e3-p3.png Graphic file (type png)
  <use funcA-h-e3-p3.png>
-Package pdftex.def Info: funcA-h-e3-p3.png used on input line 196.
+Package pdftex.def Info: funcA-h-e3-p3.png used on input line 184.
 (pdftex.def)             Requested size: 278.23827pt x 49.23514pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 [3 <./funcA-h-e3-p3.png>]
-<funcA-h-e3-p4.png, id=44, 627.34375pt x 292.09125pt>
+<funcA-h-e3-p4.png, id=42, 627.34375pt x 292.09125pt>
 File: funcA-h-e3-p4.png Graphic file (type png)
  <use funcA-h-e3-p4.png>
-Package pdftex.def Info: funcA-h-e3-p4.png used on input line 209.
+Package pdftex.def Info: funcA-h-e3-p4.png used on input line 198.
 (pdftex.def)             Requested size: 278.23827pt x 129.5501pt.
 
-[4 <./funcA-h-e3-p4.png>] <funcA-h-e3-p5.png, id=51, 628.3475pt x 233.87375pt>
+[4 <./funcA-h-e3-p4.png>] <funcA-h-e3-p5.png, id=49, 628.3475pt x 233.87375pt>
 File: funcA-h-e3-p5.png Graphic file (type png)
 
 <use funcA-h-e3-p5.png>
-Package pdftex.def Info: funcA-h-e3-p5.png used on input line 241.
+Package pdftex.def Info: funcA-h-e3-p5.png used on input line 232.
 (pdftex.def)             Requested size: 278.23827pt x 103.56137pt.
- [5 <./funcA-h-e3-p5.png>]
-<funcA-h-e3-p6.png, id=58, 625.33624pt x 125.46875pt>
+ [5 <./funcA-h-e3-p5.png>] [6]
+<funcA-h-e3-p6.png, id=60, 625.33624pt x 125.46875pt>
 File: funcA-h-e3-p6.png Graphic file (type png)
  <use funcA-h-e3-p6.png>
-Package pdftex.def Info: funcA-h-e3-p6.png used on input line 303.
+Package pdftex.def Info: funcA-h-e3-p6.png used on input line 332.
 (pdftex.def)             Requested size: 278.23827pt x 55.8267pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 385.
 
-[6 <./funcA-h-e3-p6.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
+[7 <./funcA-h-e3-p6.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 385.
  (./pset3-h.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 385.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 385.
 Package rerunfilecheck Info: File `pset3-h.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 385.
  ) 
 Here is how much of TeX's memory you used:
- 10286 strings out of 493089
- 153582 string characters out of 6134842
- 251287 words of memory out of 5000000
- 13594 multiletter control sequences out of 15000+600000
+ 10285 strings out of 493089
+ 153568 string characters out of 6134842
+ 253261 words of memory out of 5000000
+ 13593 multiletter control sequences out of 15000+600000
  16469 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,39p,253b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,39p,253b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -627,10 +627,10 @@ f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb>
-Output written on pset3-h.pdf (6 pages, 1404119 bytes).
+Output written on pset3-h.pdf (7 pages, 1406549 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  16 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

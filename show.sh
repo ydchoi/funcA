@@ -1,1 +1,1 @@
-pdflatex pset3-h.tex && open pset3-h.pdf
+pdflatex pset1.tex && open pset1.pdf
