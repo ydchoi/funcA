@@ -170,8 +170,9 @@ where the last equality holds by the choice of $A$.
 
 \smallskip
 
-In general, one should remark that Banach-Alaoglu implies that the dual norm
-is lsc with respect to the weak-* topology. \hfill $\qed$
+In general, one should remark that the weak-* compacntess 
+from Banach-Alaoglu works well with the dual norm
+being lsc with respect to the weak-* topology. \hfill $\qed$
 
 \end{solution}
 
@@ -185,7 +186,13 @@ is lsc with respect to the weak-* topology. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-
+The statement says that the adjoint of a bounded operator is weak-*-weak-* 
+continuous. It is natural to use nets for the problem. By definition of adjoint,
+\eQb
+<T {y_i}' - T y',x> = <{y_i}' - y', Tx> \to 0
+\eQe
+for any ${y_i}' \to_{\text{weak-*}} y'$, so the continuity holds.
+\hfill $\qed$
 
 \end{solution}
 
@@ -199,8 +206,11 @@ is lsc with respect to the weak-* topology. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-$(A) \implies (B)$ is obvious. Fix $J$ finite, and $\{beta_i\}_{i \in J}$.
+$(A) \implies (B)$ is obvious. Fix $J$ finite, and $\{\beta_i\}_{i \in J}$.
 Then, use definition of norm and $(A)$, we get $(B)$.
+
+\smallskip
+
 For a moment, we assume the result of exercise 1.10
 in Brezis.
 Suppose (B) is true. Then, by 1.10, there exists $\phi_0 \in E^{**}$ such that 
